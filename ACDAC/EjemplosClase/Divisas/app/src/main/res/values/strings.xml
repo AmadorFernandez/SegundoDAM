@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Divisas</string>
+    <string name="dolares">Dolares</string>
+    <string name="euros">Euros</string>
+    <string name="dolaresAEuros">Dólares a Euros</string>
+    <string name="EurosADolares">Euros a Dólares</string>
+    <string name="btnConvertir">Convertir</string>
+    <string name="msjRatio">1  Euro = 1.12 USD</string>
+</resources>
