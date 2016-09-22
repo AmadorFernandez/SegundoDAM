@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Primera2016</string>
     <string name="textoBoton">Obtener fecha y hora</string>
+    <string name="fecha_y_hora">Fecha y hora</string>
 </resources>
