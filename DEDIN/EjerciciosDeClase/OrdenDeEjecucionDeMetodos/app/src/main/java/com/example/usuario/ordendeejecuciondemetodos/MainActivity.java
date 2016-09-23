@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e(TAG,"La atividad se ha iniciado ea!!!");
+        Log.d(TAG,"La atividad se ha iniciado ea!!!");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e(TAG,"La atividad es visible ea!!!");
+        Log.d(TAG,"La atividad es visible ea!!!");
     }
 
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(TAG,"La atividad ha finalizado ea!!!");
+        Log.d(TAG,"La atividad ha finalizado ea!!!");
     }
 
 

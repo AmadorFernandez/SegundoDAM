@@ -35,8 +35,8 @@ public class ReceiverActivityClass extends AppCompatActivity {
         setContentView(R.layout.activity_receiver);
         asignarMemoria();
         accion();
-        Prueba x = new Prueba();
-        Intent intent = new Intent();
+
+
 
 
     }
@@ -46,7 +46,8 @@ public class ReceiverActivityClass extends AppCompatActivity {
     protected void accion(){
 
         // Extrae el string que se agrego al intent de la actividad llamante por su nombre
-        memRecibido = getIntent().getExtras().getString("parametro");
+       // memRecibido = getIntent().getExtras().getString("parametro");
+        memRecibido = getIntent().getExtras().getString("message");
         tvMostrar.setText(memRecibido);
 
 

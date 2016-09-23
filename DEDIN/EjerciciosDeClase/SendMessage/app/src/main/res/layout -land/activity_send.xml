@@ -12,7 +12,7 @@
     android:background="@color/fondoActivitySend">
 
     <TextView
-
+        
         android:id="@+id/tvTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,12 +40,10 @@
         android:text="@string/textoBoton"
         android:layout_below="@+id/edTexto"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="45dp"
         android:textSize="40sp"
         android:textStyle="bold"
         android:typeface="sans"
         android:textColor="@color/colorPrimary"
-        android:onClick="getEvent"
-
         />
 </RelativeLayout>

@@ -2,6 +2,8 @@ package com.example.amador.divisas;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
@@ -88,6 +90,8 @@ public class DivisasActivity extends AppCompatActivity implements View.OnClickLi
         contenedor = (RadioGroup)findViewById(R.id.rg);
         contenedor.setOnCheckedChangeListener(this);
         btnConversor.setOnClickListener(this);
+
+
 
 
     }

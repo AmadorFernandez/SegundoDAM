@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SendActivityClass extends AppCompatActivity implements View.OnClickListener {
+public class SendActivityClass extends AppCompatActivity  {
 
     Button btnEnvioCon;
     EditText edMensajeCon;
@@ -20,16 +20,8 @@ public class SendActivityClass extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
         enlazarMemorias();
-        apuntarEventoBoton();
 
     }
-
-    // Apunta el boton al su evento click
-    private void apuntarEventoBoton() {
-
-        btnEnvioCon.setOnClickListener(this);
-    }
-
 
     // Asignar las memorias de los objetos y los vincula
     protected void enlazarMemorias(){
@@ -42,20 +34,28 @@ public class SendActivityClass extends AppCompatActivity implements View.OnClick
 
 
     // Contiene la secuencia de instrucciones a ejecutar cuando el usuario pulse el botón
-    @Override
-    public void onClick(View view) {
+
+    public void getEvent(View view) {
+
+        Bundle pelota = new Bundle();
+        pelota.putString("message", edMensajeCon.getText().toString());
+
+
 
         /* Objeto para la llamada uso del constructor de dos parametros
          * el primero es el Context y el segundo es la clase a la que va destinado */
         Intent llamada = new Intent(getApplicationContext(), ReceiverActivityClass.class);
-        mensaje = edMensajeCon.getText().toString(); //Asigna el texto del control a la variable
+      //  mensaje = edMensajeCon.getText().toString(); //Asigna el texto del control a la variable
+
+        llamada.putExtras(pelota);
+        startActivity(llamada);
 
         // Comprueba si se ha escrito algo o no (Se ha podido pulsar el boton por accidente)
         if(!mensaje.isEmpty()){
 
             // Asigna el nombre "parametro" al mensaje para recuperarlo por su nombre desde la siguiente actividad
-            llamada.putExtra("parametro", mensaje);
-            startActivity(llamada); //Lanzamos la llamada a la segunda actividad
+          //  llamada.putExtra("parametro", mensaje);
+          //  startActivity(llamada); //Lanzamos la llamada a la segunda actividad
 
 
         }else{
