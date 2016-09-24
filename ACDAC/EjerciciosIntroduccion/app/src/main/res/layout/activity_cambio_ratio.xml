@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cambio_ratio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.amador.ejerciciosintroduccion.CambioRatio">
+
+
+    <TextView
+        android:id="@+id/txvDolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:text="@string/dolarSingular"
+        android:textColor="@color/colorBlack"
+        android:layout_marginBottom="30dp"
+        />
+
+    <EditText
+        android:id="@+id/edtCambioRatioDolar"
+        android:layout_below="@id/txvDolar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/txvEuro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/edtCambioRatioDolar"
+        android:textStyle="bold"
+        android:text="@string/textEuroSingular"
+        android:textColor="@color/colorBlack"/>
+
+    <EditText
+        android:id="@+id/edtCambioEuro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txvEuro"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:inputType="numberDecimal"
+        />
+
+
+
+    <Button
+        android:id="@+id/btnRegresoCambioRatio"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtCambioEuro"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:text="@string/btnCambioRatioText"/>
+
+
+</RelativeLayout>

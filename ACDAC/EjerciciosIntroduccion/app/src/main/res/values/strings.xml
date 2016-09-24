@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">Ejercicios Tema 1</string>
+    <string name="text_btn_ej_uno">Ejercicio 1</string>
+    <string name="text_btn_ej_dos">Ejercicio 2</string>
+    <string name="text_btn_ej_tres">Ejercicio 3</string>
+    <string name="text_btn_ej_cuatro">Ejercicio 4</string>
+    <string name="text_btn_ej_cinco">Ejercicio 5</string>
+
+
+    <string name="dolares">Dolares</string>
+    <string name="euros">Euros</string>
+    <string name="dolaresAEuros">Dólares a Euros</string>
+    <string name="EurosADolares">Euros a Dólares</string>
+    <string name="btnConvertir">Convertir</string>
+    <string name="msjRatio">1  Euro = 1.12 USD</string>
+    <string name="cambiar_ratio">Cambiar ratio</string>
+    <string name="btnCambioRatioText">Regresar</string>
+    <string name="textSon">SON</string>
+    <string name="dolarSingular">Valor USD en EUROS</string>
+    <string name="textEuroSingular">Valor EURO en USD</string>
+</resources>

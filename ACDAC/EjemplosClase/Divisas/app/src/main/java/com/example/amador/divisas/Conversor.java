@@ -1,4 +1,4 @@
-package com.example.amador.divisas;
+package com.example.amador.ejerciciosintroduccion;
 
 /**
  * Created by amador on 22/09/16.
