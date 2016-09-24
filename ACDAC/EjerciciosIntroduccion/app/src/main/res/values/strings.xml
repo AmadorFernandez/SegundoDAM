@@ -19,4 +19,11 @@
     <string name="textSon">SON</string>
     <string name="dolarSingular">Valor USD en EUROS</string>
     <string name="textEuroSingular">Valor EURO en USD</string>
+    <string name="introducir_centimetros_ej_dos">Centimetros a pulgadas</string>
+    <string name="edt_navegador_text">https://</string>
+    <string name="btn_it_text">Ir</string>
+    <string name="txv_navegador_text">Indique la URL de la página</string>
+    <string name="text_button_lanzar_chrono">Comenzar</string>
+    <string name="btn_restar_tiempo">-</string>
+    <string name="text_button_sumar_tiempo">+</string>
 </resources>

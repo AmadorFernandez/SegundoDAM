@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.amador.ejerciciosintroduccion">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +19,9 @@
         </activity>
         <activity android:name=".EjercicioUnoClass" />
         <activity android:name=".CambioRatio" />
-        <activity android:name=".EjercicioDosClass"></activity>
+        <activity android:name=".EjercicioDosClass" />
+        <activity android:name=".EjercicioTresClass" />
+        <activity android:name=".EjercicioCuatroClass"></activity>
     </application>
 
 </manifest>

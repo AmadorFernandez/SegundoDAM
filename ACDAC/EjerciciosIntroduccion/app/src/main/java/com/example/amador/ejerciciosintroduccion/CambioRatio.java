@@ -27,12 +27,11 @@ public class CambioRatio extends AppCompatActivity {
 
     protected void inicializar(){
 
+        valorEuro =
         valorDolar = "";
-        valorEuro = "";
         btnRegreso = (Button)findViewById(R.id.btnRegresoCambioRatio);
         edtValorDolar = (EditText)findViewById(R.id.edtCambioRatioDolar);
         edtValorEuro = (EditText)findViewById(R.id.edtCambioEuro);
-        //Cambiar formato a dos decimales
         edtValorDolar.setText(String.valueOf(getIntent().getExtras().getDouble("parametroUno")));
         edtValorEuro.setText(String.valueOf(getIntent().getExtras().getDouble("parametroDos")));
 
