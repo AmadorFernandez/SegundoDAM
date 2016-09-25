@@ -28,6 +28,7 @@ public class EjercicioTresClass extends AppCompatActivity {
         inicializar();
     }
 
+    //Inicializa los objetos y apunta el boton a su evento (ver codigo)
     private void inicializar() {
 
 
@@ -46,16 +47,15 @@ public class EjercicioTresClass extends AppCompatActivity {
                 navegador = (WebView)findViewById(R.id.wvwNavegador);
                 String url = "";
                 WebSettings opciones = navegador.getSettings();
-                opciones.setJavaScriptEnabled(true);
+                opciones.setJavaScriptEnabled(true); //Activa las opciones de JS
                 url = edtUrl.getText().toString();
 
+                //Verifica que la url no sea vacia
                 if(!url.isEmpty()){
 
                     navegador.loadUrl(url);
 
                 }
-
-
 
 
 

@@ -23,7 +23,12 @@
     <string name="edt_navegador_text">https://</string>
     <string name="btn_it_text">Ir</string>
     <string name="txv_navegador_text">Indique la URL de la página</string>
-    <string name="text_button_lanzar_chrono">Comenzar</string>
+    <string name="text_button_lanzar_chrono">Start</string>
     <string name="btn_restar_tiempo">-</string>
     <string name="text_button_sumar_tiempo">+</string>
+    <string name="text_button_pausar_chrono">Pause</string>
+    <string name="txtAscendente">Ascendente</string>
+    <string name="txtDescendente">Descendente</string>
+    <string name="txtNCafeces">Cafés:</string>
+    <string name="txtAlerta">Se terminaron las pausas por hoy</string>
 </resources>

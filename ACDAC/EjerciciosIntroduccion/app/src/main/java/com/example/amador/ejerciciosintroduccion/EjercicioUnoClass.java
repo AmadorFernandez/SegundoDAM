@@ -39,6 +39,7 @@ public class EjercicioUnoClass extends AppCompatActivity {
         inicializar();
     }
 
+    //Recupera los ratios escogidos si se solicito el cambio
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -46,8 +47,10 @@ public class EjercicioUnoClass extends AppCompatActivity {
         double valorDolar = 0.0;
         double valorEuro = 0.0;
 
+        //Coprueba si todo fue correcto en la anterior actividad
         if(resultCode == RESULT_OK){
 
+            //Recupera los valores y los reasigna
             valorDolar = Double.parseDouble(data.getExtras().getString("valorDolar"));
             valorEuro = Double.parseDouble(data.getExtras().getString("valorEuro"));
             convert.setRatioDolar(valorDolar);
@@ -74,6 +77,7 @@ public class EjercicioUnoClass extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
+                //Mueve el foco según la opción indicada
                 if(i == R.id.rbDolarEuro){
 
                     dolar.requestFocus();
@@ -90,6 +94,7 @@ public class EjercicioUnoClass extends AppCompatActivity {
 
     }
 
+    //Actualiza el ratio y lo muestra
     private void actualizarRatio() {
 
         String linea = String.valueOf(String.format("%.2f",convert.getRatioEuro())+" EURO = "+String.format("%.2f",convert.getRatioDolar())+" USD");
@@ -97,6 +102,7 @@ public class EjercicioUnoClass extends AppCompatActivity {
 
     }
 
+    //Realiza la converción o llama al metodo para lanzar la activity
     public void onClickConversor(View v){
 
         switch (v.getId()){
@@ -112,8 +118,8 @@ public class EjercicioUnoClass extends AppCompatActivity {
 
     }
 
+    //Lanza la activity para cambiar el ratio
     private void lanzarCambioRatioActivity() {
-
 
             Intent i = new Intent(this, CambioRatio.class);
             i.putExtra("parametroUno", convert.getRatioDolar());
@@ -122,6 +128,7 @@ public class EjercicioUnoClass extends AppCompatActivity {
 
     }
 
+    //Realiza la conversion (ver codigo)
     private void conversion() {
 
 

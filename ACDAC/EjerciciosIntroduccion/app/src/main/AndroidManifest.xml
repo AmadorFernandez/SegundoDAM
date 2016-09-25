@@ -10,18 +10,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SeleccionActivity">
+        <activity
+            android:name=".SeleccionActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EjercicioUnoClass" />
+        <activity
+            android:name=".EjercicioUnoClass"
+            android:screenOrientation="portrait" />
         <activity android:name=".CambioRatio" />
         <activity android:name=".EjercicioDosClass" />
         <activity android:name=".EjercicioTresClass" />
-        <activity android:name=".EjercicioCuatroClass"></activity>
+        <activity android:name=".EjercicioCuatroClass" />
+        <activity android:name=".EjercicioCincoClass"></activity>
     </application>
 
 </manifest>

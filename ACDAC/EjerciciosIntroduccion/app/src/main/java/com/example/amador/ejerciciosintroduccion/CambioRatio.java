@@ -25,6 +25,7 @@ public class CambioRatio extends AppCompatActivity {
 
     }
 
+    //Inicializa los objetos y recupera los parametros enviados por la Activity llamante
     protected void inicializar(){
 
         valorEuro =
@@ -43,10 +44,12 @@ public class CambioRatio extends AppCompatActivity {
                 Intent i;
 
 
+                //Verifica que los textos  no esten vacios, de ser asi, cancela el resultado
                 if(!edtValorDolar.getText().toString().isEmpty() && !edtValorEuro.getText().toString().isEmpty()){
 
                     i = getIntent();
 
+                    //Guarda el resultado y indica que todo esta correcto
                     i.putExtra("valorEuro", edtValorEuro.getText().toString());
                     i.putExtra("valorDolar", edtValorDolar.getText().toString());
                     setResult(RESULT_OK, i);
@@ -59,6 +62,7 @@ public class CambioRatio extends AppCompatActivity {
 
                 }
 
+                //Finaliza la actividad
                 finish();
 
             }

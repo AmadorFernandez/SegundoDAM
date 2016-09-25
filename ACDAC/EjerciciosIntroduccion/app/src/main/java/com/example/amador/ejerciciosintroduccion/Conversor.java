@@ -32,11 +32,14 @@ public class Conversor {
         this.ratioDolar = ratioDolar;
     }
 
+
+    //Lo dice el nombre
     public double dolarAEuro(double dolar){
 
         return dolar / this.ratioEuro;
     }
 
+    //Lo dice el nombre
     public double euroADolar(double euro){
 
         return euro / this.ratioDolar;

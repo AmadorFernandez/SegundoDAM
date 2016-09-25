@@ -22,6 +22,7 @@ public class EjercicioDosClass extends AppCompatActivity {
         inicializar();
     }
 
+    //Inicializa los objetos y apunta el boton a su evento click
     private void inicializar() {
 
         btnConvertir = (Button)findViewById(R.id.btnConvertCmPulgadas);
@@ -38,10 +39,13 @@ public class EjercicioDosClass extends AppCompatActivity {
         });
     }
 
+    //Convierte el valor (Ver el codigo)
     private void conversion(){
 
+        //Verifica que el texto no este en blanco
         if(!edtConvertir.getText().toString().isEmpty()){
 
+            //Convierte el texto a tipo double, después a puldas y muestra el resultado
             valor = Double.parseDouble(edtConvertir.getText().toString());
             valor *= VALOR_PULGADAS;
             txvResultEJ2.setText(String.valueOf(valor)+ "Pulgadas");

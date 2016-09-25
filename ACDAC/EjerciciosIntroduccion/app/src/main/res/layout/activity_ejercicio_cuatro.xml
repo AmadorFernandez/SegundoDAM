@@ -15,13 +15,15 @@
         android:id="@+id/txvTiempoCrono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50dp"/>
+        android:textSize="50dp"
+        android:gravity="center"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-
-
+        android:layout_below="@+id/txvTiempoCrono"
+        android:id="@+id/layoudBotonesChrono"
         >
 
         <Button
@@ -30,8 +32,6 @@
             android:layout_height="@dimen/height_button_modificar_chrono"
             android:text="@string/btn_restar_tiempo"
             android:textStyle="bold"
-
-
             />
 
         <Button
@@ -44,6 +44,17 @@
 
             />
 
+
+        <Button
+            android:id="@+id/btnPausarChrono"
+            android:layout_width="@dimen/width_button_lanzar_chrono"
+            android:layout_height="@dimen/height_button_lanzar_chrono"
+            android:text="@string/text_button_pausar_chrono"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            />
+
+
         <Button
             android:id="@+id/btnSumarTiempo"
             android:layout_width="@dimen/width_button_modificar_chrono"
@@ -51,12 +62,80 @@
             android:text="@string/text_button_sumar_tiempo"
             android:textStyle="bold"
 
-
             />
 
 
 
+
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoudSwich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoudBotonesChrono"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txvAscendente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="@string/txtAscendente"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/swhCrono"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txvDescendente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="@string/txtDescendente"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorBlack"
+
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txvNCafeces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_button_crono"
+        android:textStyle="bold"
+        android:text="@string/txtNCafeces"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@id/layoudSwich"
+        />
+
+    <TextView
+        android:id="@+id/txvAlerta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_button_crono"
+        android:textStyle="bold"
+        android:text="@string/txtAlerta"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/txvNCafeces"
+        />
 
 
 </RelativeLayout>
