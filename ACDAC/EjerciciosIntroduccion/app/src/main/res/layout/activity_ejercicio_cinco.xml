@@ -12,6 +12,8 @@
 
 
 
+
+
     <TextView
         android:id="@+id/txvTablero"
         android:layout_width="match_parent"
@@ -51,17 +53,10 @@
 
             />
 
-        <Button
 
-            android:id="@+id/btnPuto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
 
     </LinearLayout>
-
-
-
 
 
 

@@ -58,6 +58,7 @@ public class Tablero {
     public void avanzarGeneracion(){
 
 
+        char[][] copia = new char[filas][columnas];
 
 
         for (int i = 0; i < mTablero.length; i++){
@@ -65,15 +66,13 @@ public class Tablero {
             for(int j = 0; j < mTablero[i].length; j++){
 
 
-                mTablero[i][j] = comprobarVida(i,j, mTablero);
+                copia[i][j] = comprobarVida(i,j, mTablero);
 
             }
 
-
-
-
         }
 
+        mTablero = copia;
 
     }
 

@@ -37,6 +37,8 @@ public class EjercicioCincoClass extends AppCompatActivity {
         juego = new Tablero(18, 50);
 
 
+
+
         btnPuto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
