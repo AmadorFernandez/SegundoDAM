@@ -30,9 +30,9 @@ namespace prueba
 
 			int valor = 0;
 
-			for (int i = 0; i < mTablero.GetLength(0); i++){
+			for (int i = 0; i < filas; i++){
 
-				for(int j = 0; j < mTablero.GetLength(1); j++){
+				for(int j = 0; j < columnas; j++){
 
 					valor = rnd.Next (2);
 
@@ -57,9 +57,9 @@ namespace prueba
 			char[,] copia = new char[filas, columnas];
 
 
-			for (int i = 0; i < mTablero.GetLength(0); i++){
+			for (int i = 0; i < filas; i++){
 
-				for(int j = 0; j < mTablero.GetLength(1); j++){
+				for(int j = 0; j < columnas; j++){
 
 
 					copia[i,j] = comprobarVida(i,j, mTablero);
@@ -77,20 +77,20 @@ namespace prueba
 			char[,] subMatriz = new char[3,3];
 			int nVivas = 0;
 			char celula = ' ';
-			char estado = ' ';
+			char estado = MUERTA;
 
 
-			subMatriz[0,0] = mTablero[((i-1) + mTablero.GetLength(0)) % mTablero.GetLength(0), ((j-1) + mTablero.GetLength(1)) % mTablero.GetLength(1)];
-			subMatriz[0,1] = mTablero[((i-1) + mTablero.GetLength(0)) % mTablero.GetLength(0), (j + mTablero.GetLength(1)) % mTablero.GetLength(1)];
-			subMatriz[0,2] = mTablero[((i-1) + mTablero.GetLength(0)) % mTablero.GetLength(0), (j +1) % mTablero.GetLength(1)];
+			subMatriz[0,0] = mTablero[((i-1) + filas) % filas, ((j-1) + columnas) % columnas];
+			subMatriz[0,1] = mTablero[((i-1) + filas) % filas, j % columnas];
+			subMatriz[0,2] = mTablero[((i-1) + filas) % filas, (j +1) % columnas];
 
-			subMatriz[1,0] = mTablero[(i + mTablero.GetLength(0)) % mTablero.GetLength(0) , ((j-1 + mTablero.GetLength(1))) % mTablero.GetLength(1)];
-			subMatriz[1,1] = mTablero[(i + mTablero.GetLength(0)) % mTablero.GetLength(0), j];
-			subMatriz[1,2] = mTablero[(i+1)%mTablero.GetLength(0), (j+1) % mTablero.GetLength(1)];
+			subMatriz[1,0] = mTablero[(i +1) % filas , ((j-1 + columnas)) % columnas];
+			subMatriz[1,1] = mTablero[i, j];
+			subMatriz[1,2] = mTablero[(i + 1) %filas, (j+1) % columnas];
 
-			subMatriz[2,0] = mTablero[( i +1 + mTablero.GetLength(0)) % mTablero.GetLength(0), ((j-1) + mTablero.GetLength(1)) % mTablero.GetLength(1)];
-			subMatriz[2, 1] = mTablero[( i +1 + mTablero.GetLength(0)) % mTablero.GetLength(0), j];
-			subMatriz[2, 2] = mTablero[( i +1 + mTablero.GetLength(0)) % mTablero.GetLength(0), ((j+1) % mTablero.GetLength(1))];
+			subMatriz[2,0] = mTablero[( i +1 ) % filas, ((j-1) + columnas) % columnas];
+			subMatriz[2, 1] = mTablero[( i +1) % filas, j];
+			subMatriz[2, 2] = mTablero[( i +1) % filas, ((j+1) % columnas)];
 
 
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -36,7 +37,6 @@ public class EjercicioTresClass extends AppCompatActivity {
         btnNavegar = (Button)findViewById(R.id.btnNavegar);
         navegador = (WebView)findViewById(R.id.wvwNavegador);
         edtUrl.setSelection(edtUrl.getText().length());
-
 
 
         btnNavegar.setOnClickListener(new View.OnClickListener() {

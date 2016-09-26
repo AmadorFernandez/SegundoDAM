@@ -31,4 +31,5 @@
     <string name="txtDescendente">Descendente</string>
     <string name="txtNCafeces">Cafés:</string>
     <string name="txtAlerta">Se terminaron las pausas por hoy</string>
+    <string name="btnIntroducirPalabra">Comprobar</string>
 </resources>

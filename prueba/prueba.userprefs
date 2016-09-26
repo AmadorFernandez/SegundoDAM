@@ -1,9 +1,9 @@
-﻿<Properties>
+﻿<Properties StartupItem="prueba/prueba.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="prueba/Tablero.cs">
     <Files>
-      <File FileName="prueba/Program.cs" Line="26" Column="32" />
-      <File FileName="prueba/Tablero.cs" Line="93" Column="86" />
+      <File FileName="prueba/Program.cs" Line="21" Column="7" />
+      <File FileName="prueba/Tablero.cs" Line="93" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

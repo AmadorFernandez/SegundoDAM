@@ -5,10 +5,8 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -17,13 +15,18 @@ public class EjercicioCuatroClass extends AppCompatActivity {
 
 
 
-    Crono crono;
-    Button btnSumarTiempo, btnRestarTiempo, btnStar, btnPausa;
+
+    Button btnSumarTiempo, btnRestarTiempo, btnStar;
     TextView txvCrono, txtNCafeces, txtAlerta;
     Switch asignador;
     byte nCafes;
     MediaPlayer mp;
     private static final String CAFES = "Cafés: ";
+    int segundos;
+    int minutos;
+    Crono crono;
+    boolean ascendente;
+    boolean activo;
 
 
 
@@ -40,8 +43,6 @@ public class EjercicioCuatroClass extends AppCompatActivity {
     private void inicializar() {
 
         btnStar = (Button)findViewById(R.id.btnLanzarChrono);
-        btnPausa = (Button)findViewById(R.id.btnPausarChrono);
-        btnPausa.setEnabled(false); //Desavilita el boton para que nunca se de la opción de Start y puse al mismo tiempo
         btnRestarTiempo = (Button)findViewById(R.id.btnRestarTiempo);
         btnSumarTiempo = (Button)findViewById(R.id.btnSumarTiempo);
         txvCrono = (TextView)findViewById(R.id.txvTiempoCrono);
@@ -49,52 +50,22 @@ public class EjercicioCuatroClass extends AppCompatActivity {
         txtAlerta = (TextView)findViewById(R.id.txvAlerta);
         txtAlerta.setText(""); //Establece el texto vacio para que no se muestre
         txtNCafeces = (TextView)findViewById(R.id.txvNCafeces);
-        crono = new Crono();
         nCafes = 0;
-        txvCrono.setText(crono.getContador());
         txtNCafeces.setText(CAFES + nCafes); //Establece el texto para el contador de cafés
         mp = MediaPlayer.create(getApplicationContext(), R.raw.snd); //Establece el sonido de la alarma
-
-
-        asignador.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                //Establece el sentido de marcha del crono
-                crono.setAscendente(!asignador.isChecked());
-            }
-        });
-
-        btnPausa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //Comprueba que el crono este creado y habilta los botones permitidos en este caso
-                if(crono != null){
-
-                    crono.pausa();
-                    btnStar.setEnabled(true);
-                    btnRestarTiempo.setEnabled(true);
-                    btnSumarTiempo.setEnabled(true);
-                    btnPausa.setEnabled(false);
-                }
-
-            }
-        });
+        minutos = 0;
+        segundos = 0;
+        ascendente = true;
+        activo = false;
+        actualizarTiempo();
 
         btnSumarTiempo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int value = 0;
-
-                if(crono != null){
-
-                    //Aumenta los minutos
-                    value = crono.getMinutos();
-                    value++;
-                    crono.setMinutos(value);
-                }
+                //Suma y actualiza el tiempo
+                minutos++;
+                actualizarTiempo();
 
             }
         });
@@ -103,110 +74,146 @@ public class EjercicioCuatroClass extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                int value = 0;
+                //Si no se ha llegado a 0 resta y actualiza el tiempo
+                if (minutos > 0){
 
-                if(crono != null){
-
-                    //Disminuye los minutos
-                    value = crono.getMinutos();
-                    value--;
-                    crono.setMinutos(value);
+                    minutos--;
+                    actualizarTiempo();
                 }
             }
         });
+
+        asignador.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                //Modifica el controlador del sentido de la cuenta
+                ascendente = !isChecked;
+
+            }
+        });
+
+
 
         btnStar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //Verifica que el crono este creado y no este ya ejecutando
-                 if(crono != null && !crono.isEjecutando()){
+                // No permite entrar si se alcanzo el limite de cafés
+                if(nCafes < 10) {
 
-                    crono.start(); //Arranca el crono
+                    //Deshabilita los botones e inicializa el tiempo
+                    activo = true;
+                    btnSumarTiempo.setEnabled(false);
+                    btnRestarTiempo.setEnabled(false);
+                    btnStar.setEnabled(false);
+                    crono = new Crono(minutos * 60 * 1000, 10);
+                    crono.start();
 
-                }else {
+                }
 
-                     //Pausa el crono ya que el hilo esta en ejecucion y no se puede volver a llamar a star()
-                     crono.setActivo(true);
-
-                 }
-
-                //Habilita los botones permitidos en este caso y deshabilita los que no
-                btnStar.setEnabled(false);
-                btnPausa.setEnabled(true);
-                btnRestarTiempo.setEnabled(false);
-                btnSumarTiempo.setEnabled(false);
 
             }
         });
 
 
 
-        //Apunta el evento tick
-        crono.setOnCronoListener(new CronoListener() {
-            @Override
-            public void onTick(Crono c) {
-
-                //Usamos este método para que el hilo del crono pueda modificar variables en el hilo principal
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-
-
-                        AlertDialog.Builder popup = new AlertDialog.Builder(EjercicioCuatroClass.this);
-                        //Muestra el tiempo a cada tick
-                        txvCrono.setText(crono.getContador());
-                        //Comprueba si se puede lanzar la alarma
-                         if(crono.getSegundos() == 0 && crono.getMinutos() == 0 && !mp.isPlaying() && crono.isActivo()){
-
-
-
-                             mp.start();
-                             nCafes++;
-                             txtNCafeces.setText(CAFES + nCafes);
-                             crono.pausa();
-                             reiniciarEstado();
-
-                             //Comprueba si se alcanzo el máximo de cafés
-                             if(nCafes == 10){
-
-                                 popup.setTitle("AVISO");
-                                 popup.setMessage("No más cafes por el dia de hoy");
-                                 popup.setPositiveButton("OK", null);
-                                 popup.show();
-
-                             }
-
-                         }
-
-                    }
-                });
-
-            }
-        });
-
-
     }
 
-    //Reinicia el crono y los botones al estado principal
-    public void reiniciarEstado(){
+    //Actualiza el tiempo
+    private void actualizarTiempo() {
 
-        crono.setMinutos(0);
-        crono.setSegundos(0);
-        txtAlerta.setText("");
-        btnStar.setEnabled(true);
-        btnRestarTiempo.setEnabled(true);
-        btnSumarTiempo.setEnabled(true);
-        btnPausa.setEnabled(false);
-
+        txvCrono.setText(String.format("%02d", minutos) + ":" + String.format("%02d", segundos));
     }
 
-    //Liberamos los recursos del hilo
-    @Override
-    protected void onStop() {
-        super.onStop();
-        crono = null;
+
+    public class Crono extends CountDownTimer{
 
 
-    }
+      long total, intervalo;
+
+
+      /**
+       * @param millisInFuture    The number of millis in the future from the call
+       *                          to {@link #start()} until the countdown is done and {@link #onFinish()}
+       *                          is called.
+       * @param countDownInterval The interval along the way to receive
+       *                          {@link #onTick(long)} callbacks.
+       */
+      public Crono(long millisInFuture, long countDownInterval) {
+          super(millisInFuture, countDownInterval);
+
+          total = millisInFuture;
+      }
+
+      @Override
+      public void onTick(long millisUntilFinished) {
+
+          // Posición 0 minutos y 1 segundos
+          long[] time = new long[2];
+
+
+          // Verifica el sentido de la cuenta
+          if(ascendente){
+
+              intervalo = total - millisUntilFinished;
+
+          }else{
+
+             intervalo = millisUntilFinished;
+          }
+
+          //Se fracciona y actualiza el tiempo
+          fraccionarTiempo(time);
+          txvCrono.setText(String.format("%02d", time[0]) + ":" + String.format("%02d", time[1]));
+
+      }
+
+        //Extrae minutos y segundos del tiempo total
+      private void fraccionarTiempo(long[] time) {
+
+          time[1] = (intervalo / 1000) % 60;
+          time[0] = (intervalo / 1000) / 60;
+      }
+
+      @Override
+      public void onFinish() {
+
+
+          //Reinicia las variables, habila los botones, lanza la alarma y verifica si se alcanzo el límite de cafes
+            AlertDialog.Builder popup = new AlertDialog.Builder(EjercicioCuatroClass.this);
+            txtAlerta.setText("Pausa terminada loco\n vuelta al curro");
+            btnSumarTiempo.setEnabled(true);
+            btnRestarTiempo.setEnabled(true);
+            btnStar.setEnabled(true);
+            txvCrono.setText("00:00");
+            nCafes++;
+            txtNCafeces.setText(CAFES + nCafes);
+            minutos = 0;
+            segundos = 0;
+            mp.start();
+
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                 @Override
+                 public void onCompletion(MediaPlayer mp) {
+
+                  txtAlerta.setText("");
+                }
+            });
+
+           if(nCafes == 10){
+
+               popup.setTitle("Aviso");
+               popup.setMessage("Se alcazo el máximo de cafés permitidos, cierra la aplicación y vuelve a abrirla si quieres más.");
+               popup.setPositiveButton("Ok", null);
+               popup.show();
+           }
+
+
+
+
+      }
+  }
+
+
 }

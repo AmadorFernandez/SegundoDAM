@@ -12,7 +12,7 @@ public class Conversor {
     public Conversor(){
 
         this.ratioEuro = 1.11f; // A día 24/09/2016 1 Euro son 1.11 USD
-        this.ratioDolar = 0.89f; // A día 24/09/2016 1 USD son 0.89 USD
+        this.ratioDolar = 0.89f; // A día 24/09/2016 1 USD son 0.89 Euros
 
     }
 
@@ -36,13 +36,13 @@ public class Conversor {
     //Lo dice el nombre
     public double dolarAEuro(double dolar){
 
-        return dolar / this.ratioEuro;
+        return dolar * this.ratioDolar;
     }
 
     //Lo dice el nombre
     public double euroADolar(double euro){
 
-        return euro / this.ratioDolar;
+        return euro * this.ratioEuro;
     }
 
 

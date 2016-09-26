@@ -1,0 +1,6 @@
+/home/amador/DAM/prueba/prueba/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/amador/DAM/prueba/prueba/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/amador/DAM/prueba/prueba/bin/Debug/prueba.exe.mdb
+/home/amador/DAM/prueba/prueba/bin/Debug/prueba.exe
+/home/amador/DAM/prueba/prueba/obj/x86/Debug/prueba.exe
+/home/amador/DAM/prueba/prueba/obj/x86/Debug/prueba.exe.mdb

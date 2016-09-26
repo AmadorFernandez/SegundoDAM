@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace prueba
 {
@@ -18,6 +19,7 @@ namespace prueba
 
 						Console.Write(juego.getmTablero()[i,j]);
 
+
 					}
 
 
@@ -25,6 +27,7 @@ namespace prueba
 
 				juego.avanzarGeneracion ();
 
+			//	Console.ReadLine ();
 
 
 
