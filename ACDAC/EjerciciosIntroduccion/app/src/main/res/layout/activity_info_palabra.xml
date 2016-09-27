@@ -8,17 +8,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/azul_fondo"
     tools:context="com.example.amador.ejerciciosintroduccion.InfoPalabraClass"
-    android:background="@drawable/fondo_info">
+   >
 
-    <TextView
-        android:text="@string/información_palabra"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:layout_alignParentBottom="true"
-        android:textColor="@color/colorBlack"/>
+
+<ListView
+    android:id="@+id/listPalabras"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></ListView>
+
+
+
 
 </RelativeLayout>

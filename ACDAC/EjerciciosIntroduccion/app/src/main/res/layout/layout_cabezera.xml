@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/imvIconoDiccionarioIz"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_diccionario"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_cabecera_dicionario"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorYelow"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+
+        />
+
+    <ImageView
+        android:id="@+id/imvIconoDiccionarioDer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_diccionario"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"/>
+
+
+
+</RelativeLayout>

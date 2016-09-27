@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amador.ejerciciosintroduccion.EjercicioCincoClass"
-    android:background="@drawable/palabras"
+    android:background="@drawable/azul_fondo"
 
     >
 
@@ -19,16 +19,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="50dp"
+
         >
 
         <EditText
             android:id="@+id/edtPalabra"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorWrite"
             android:hint="Escribe la palabreja"
             android:layout_centerInParent="true"
             android:layout_alignParentTop="true"
@@ -36,16 +35,36 @@
             android:textStyle="normal|bold|italic"
             android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/btnComprobarPalabra"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_centerInParent="true"
+        <LinearLayout
             android:layout_below="@+id/edtPalabra"
-            android:background="@drawable/img_btn_pensar_palabra"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnGuaPalabra"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/edtPalabra"
+                android:background="@drawable/img_anadir_palabra"
+                />
+
+            <Button
+                android:id="@+id/btnAbrirDiccionario"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/edtPalabra"
+                android:background="@drawable/img_boton_diccionario"
+                android:layout_marginLeft="40dp"
+                />
+
+        </LinearLayout>
+
 
     </RelativeLayout>
 

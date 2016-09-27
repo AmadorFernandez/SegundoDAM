@@ -32,5 +32,6 @@
     <string name="txtNCafeces">Cafés:</string>
     <string name="txtAlerta">Se terminaron las pausas por hoy</string>
     <string name="btnIntroducirPalabra">Comprobar</string>
-    <string name="información_palabra">Información sobre la palabra</string>
+    <string name="información_palabra">Detalle</string>
+    <string name="titulo_cabecera_dicionario">Diccionario</string>
 </resources>

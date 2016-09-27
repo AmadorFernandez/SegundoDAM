@@ -54,18 +54,23 @@ public class Palabra implements Comparator<Palabra> {
         this.texto = null;
     }
 
+    //TODO arreglar este metodo
+
     private boolean comprobarPalindromo(String texto) {
 
         StringBuilder copia = new StringBuilder(texto);
         return texto.toLowerCase() == copia.reverse().toString().toLowerCase();
     }
 
+    //TODO Arreglar este metodo
+
     public static boolean esValida(String palabra){
 
         String separdores = "\\/,.;: )]}123456789'\"";
         StringTokenizer st = new StringTokenizer(palabra, separdores);
 
-        return st.countTokens() > 1;
+
+        return true;
 
     }
 

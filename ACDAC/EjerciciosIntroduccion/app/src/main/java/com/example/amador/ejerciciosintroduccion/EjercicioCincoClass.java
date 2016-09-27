@@ -11,13 +11,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.net.JarURLConnection;
+import java.util.ArrayList;
 
 public class EjercicioCincoClass extends AppCompatActivity {
 
     Palabra p;
-    GestPalabras diccionario;
+    ArrayList<String> diccionario;
     EditText edtPalabra;
-    Button btnRecogerPalabra;
+    Button btnRecogerPalabra, btnAbrirDiccionario;
 
 
    @Override
@@ -31,14 +32,32 @@ public class EjercicioCincoClass extends AppCompatActivity {
     private void inicializar() {
 
         edtPalabra = (EditText)findViewById(R.id.edtPalabra);
-        btnRecogerPalabra = (Button)findViewById(R.id.btnComprobarPalabra);
-        diccionario = new GestPalabras();
+        btnRecogerPalabra = (Button)findViewById(R.id.btnGuaPalabra);
+        btnAbrirDiccionario = (Button)findViewById(R.id.btnAbrirDiccionario);
+        diccionario = new ArrayList<String>();
+
+        btnRecogerPalabra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                diccionario.add(edtPalabra.getText().toString());
+            }
+        });
+
+        btnAbrirDiccionario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getApplicationContext(), InfoPalabraClass.class);
+                i.putExtra("parametroUno", diccionario);
+                startActivity(i);
+
+            }
+        });
 
     }
 
-    public void comenzar(){
 
-    }
 
 
 
