@@ -34,7 +34,9 @@
             android:layout_marginLeft="50px"
             android:textColor="#000"
             android:textStyle="bold"
-            />
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:fontFamily="sans-serif"
+             />
 
 
     </LinearLayout>

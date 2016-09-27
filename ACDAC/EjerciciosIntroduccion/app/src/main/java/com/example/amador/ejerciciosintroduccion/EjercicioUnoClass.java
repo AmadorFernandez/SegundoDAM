@@ -135,39 +135,62 @@ public class EjercicioUnoClass extends AppCompatActivity {
         String resultado = " ";
         double valor = 0.0;
         String campo = "";
+        String msgError = " ";
 
-        //Se comprueba cual es RadioButton seleccionado
-        if(dolarEuro.isChecked()){
+        try {
 
-            campo = dolar.getText().toString();
+            //Se comprueba cual es RadioButton seleccionado
+            if (dolarEuro.isChecked()) {
 
-            //Comprobamos que el campo es valido para la conversión.
-            //De ser valido se convierte y se llama a la clase Conversor para el cambio de divisa
-            if(comprobarValidez(campo)) {
+                campo = dolar.getText().toString();
 
-                valor = Double.parseDouble(campo.replace(',','.'));
-                resultado = String.format("%.2f", convert.dolarAEuro(valor));
-                euro.setText(String.valueOf(resultado));
+                //Comprobamos que el campo es valido para la conversión.
+                //De ser valido se convierte y se llama a la clase Conversor para el cambio de divisa
+                if (comprobarValidez(campo)) {
+
+                    valor = Double.parseDouble(campo);
+                    resultado = String.format("%.2f", convert.dolarAEuro(valor));
+                    euro.setText(String.valueOf(resultado));
+                }
+
+            } else {
+
+                campo = euro.getText().toString();
+
+                if (comprobarValidez(campo)) {
+
+                    valor = Double.parseDouble(campo);
+                    resultado = String.format("%.2f", convert.euroADolar(valor));
+                    dolar.setText(String.valueOf(resultado));
+                }
+
             }
+        //Controlamos posibles errores
+        }catch (NumberFormatException e){
 
-        }else{
+            lanzarMensaje("Formato introducido incorrecto");
 
-            campo = euro.getText().toString();
+        }catch (NullPointerException ex){
 
-            if(comprobarValidez(campo)) {
+            lanzarMensaje("Parametro nulo");
 
-                valor = Double.parseDouble(campo.replace(',','.'));
-                resultado = String.format("%.2f", convert.euroADolar(valor));
-                dolar.setText(String.valueOf(resultado));
-            }
+        }catch (Exception e){
+
+            lanzarMensaje("Se produjo el siguiente error "+e.getMessage());
 
         }
+    }
+
+    //Lanza el mensaje indicado al usuario
+    private void lanzarMensaje(String msgError) {
+
+        Toast.makeText(this, msgError, Toast.LENGTH_LONG).show();
     }
 
     //Comprueba si un String esta es valido para su conversión a double, devuelve falso si no lo es y verdadero en caso contrario
     public boolean comprobarValidez(String texto){
 
-        return !texto.isEmpty() && texto != null;
+        return !texto.isEmpty() && texto != null && texto != ".";
     }
 }
 

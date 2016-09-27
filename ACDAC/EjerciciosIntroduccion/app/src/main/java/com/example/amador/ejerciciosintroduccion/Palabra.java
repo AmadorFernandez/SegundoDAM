@@ -1,6 +1,7 @@
 package com.example.amador.ejerciciosintroduccion;
 
 import java.util.Comparator;
+import java.util.StringTokenizer;
 
 /**
  * Created by amador on 26/09/16.
@@ -27,7 +28,7 @@ public class Palabra implements Comparator<Palabra> {
 
     public void setTexto(String texto) {
 
-        if(texto.toLowerCase() != this.texto.toLowerCase()){
+        if(texto.toLowerCase() != this.texto.toLowerCase() && Palabra.esValida(texto)){
 
             this.texto = texto;
             nCaracteres = texto.length();
@@ -38,10 +39,11 @@ public class Palabra implements Comparator<Palabra> {
 
     public Palabra(String texto) {
 
-        this.texto = texto;
-        this.nCaracteres = nCaracteres;
-        this.esPalindromo = comprobarPalindromo(texto);
-        nCaracteres = texto.length();
+        if(Palabra.esValida(texto)) {
+            this.texto = texto;
+            this.esPalindromo = comprobarPalindromo(texto);
+            nCaracteres = texto.length();
+        }
 
     }
 
@@ -56,6 +58,15 @@ public class Palabra implements Comparator<Palabra> {
 
         StringBuilder copia = new StringBuilder(texto);
         return texto.toLowerCase() == copia.reverse().toString().toLowerCase();
+    }
+
+    public static boolean esValida(String palabra){
+
+        String separdores = "\\/,.;: )]}123456789'\"";
+        StringTokenizer st = new StringTokenizer(palabra, separdores);
+
+        return st.countTokens() > 1;
+
     }
 
     @Override

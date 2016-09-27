@@ -32,11 +32,9 @@
             android:hint="Escribe la palabreja"
             android:layout_centerInParent="true"
             android:layout_alignParentTop="true"
-
-
-
-
-            />
+            android:inputType=""
+            android:textStyle="normal|bold|italic"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnComprobarPalabra"
@@ -47,7 +45,6 @@
             android:layout_centerInParent="true"
             android:layout_below="@+id/edtPalabra"
             android:background="@drawable/img_btn_pensar_palabra"
-
             />
 
     </RelativeLayout>
