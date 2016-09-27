@@ -36,6 +36,7 @@ public class EjercicioCincoClass extends AppCompatActivity {
         btnAbrirDiccionario = (Button)findViewById(R.id.btnAbrirDiccionario);
         diccionario = new ArrayList<String>();
 
+
         btnRecogerPalabra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
