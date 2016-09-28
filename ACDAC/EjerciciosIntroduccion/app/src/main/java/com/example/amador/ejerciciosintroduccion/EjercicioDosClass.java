@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class EjercicioDosClass extends AppCompatActivity {
 
@@ -42,13 +43,26 @@ public class EjercicioDosClass extends AppCompatActivity {
     //Convierte el valor (Ver el codigo)
     private void conversion(){
 
-        //Verifica que el texto no este en blanco
-        if(!edtConvertir.getText().toString().isEmpty()){
+        try {
+            //Verifica que el texto no este en blanco
+            if (!edtConvertir.getText().toString().isEmpty()) {
 
-            //Convierte el texto a tipo double, después a puldas y muestra el resultado
-            valor = Double.parseDouble(edtConvertir.getText().toString());
-            valor *= VALOR_PULGADAS;
-            txvResultEJ2.setText(String.valueOf(valor)+ "Pulgadas");
+                //Convierte el texto a tipo double, después a puldas y muestra el resultado
+                valor = Double.parseDouble(edtConvertir.getText().toString());
+                valor *= VALOR_PULGADAS;
+                txvResultEJ2.setText(String.valueOf(valor) + "Pulgadas");
+            }
+        }catch (NumberFormatException e){
+
+            Toast.makeText(EjercicioDosClass.this, "Formato incorrecto", Toast.LENGTH_LONG).show();
+
+        }catch (NullPointerException e){
+
+            Toast.makeText(EjercicioDosClass.this, "Parametro nulo", Toast.LENGTH_LONG).show();
+
+        }catch (Exception e){
+
+            Toast.makeText(EjercicioDosClass.this, "Se produjo el siguiente error "+e.getMessage(), Toast.LENGTH_LONG).show();
         }
 
     }
