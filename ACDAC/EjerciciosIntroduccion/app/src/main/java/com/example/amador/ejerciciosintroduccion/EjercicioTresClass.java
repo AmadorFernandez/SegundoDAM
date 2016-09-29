@@ -37,16 +37,16 @@ public class EjercicioTresClass extends AppCompatActivity {
         btnNavegar = (Button)findViewById(R.id.btnNavegar);
         navegador = (WebView)findViewById(R.id.wvwNavegador);
         edtUrl.setSelection(edtUrl.getText().length());
-
-
         btnNavegar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 
                 navegador = (WebView)findViewById(R.id.wvwNavegador);
                 String url = "";
                 WebSettings opciones = navegador.getSettings();
+                navegador.setWebViewClient(new WebViewClient());
                 opciones.setJavaScriptEnabled(true); //Activa las opciones de JS
                 url = edtUrl.getText().toString();
 

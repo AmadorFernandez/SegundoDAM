@@ -32,6 +32,7 @@
             android:layout_centerInParent="true"
             android:layout_alignParentTop="true"
             android:inputType=""
+            android:textColor="@color/colorWrite"
             android:textStyle="normal|bold|italic"
             android:textAllCaps="false" />
 

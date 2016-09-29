@@ -13,7 +13,8 @@
         android:hardwareAccelerated="true">
         <activity
             android:name=".SeleccionActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

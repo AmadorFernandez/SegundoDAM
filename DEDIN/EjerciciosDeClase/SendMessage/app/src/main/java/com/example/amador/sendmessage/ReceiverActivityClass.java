@@ -20,8 +20,8 @@ import static java.lang.System.gc;
 public class ReceiverActivityClass extends AppCompatActivity {
 
 
-    String memRecibido = " ";
-    TextView tvMostrar;
+    private String memRecibido = " ";
+    private TextView tvMostrar;
 
 
 
@@ -35,27 +35,22 @@ public class ReceiverActivityClass extends AppCompatActivity {
         setContentView(R.layout.activity_receiver);
         asignarMemoria();
         accion();
-
-
-
-
     }
 
 
 
     protected void accion(){
 
-        // Extrae el string que se agrego al intent de la actividad llamante por su nombre
-       // memRecibido = getIntent().getExtras().getString("parametro");
-        memRecibido = getIntent().getExtras().getString("message");
+       // It extrac the message
         tvMostrar.setText(memRecibido);
 
 
     }
 
-    // Asigna la memoria y enlaza el objeto con la vista
+    // Greets the user with the received text
     void asignarMemoria(){
 
         tvMostrar = (TextView)findViewById(R.id.tvMostrar);
+        memRecibido = getIntent().getExtras().getString("parametro");
     }
 }

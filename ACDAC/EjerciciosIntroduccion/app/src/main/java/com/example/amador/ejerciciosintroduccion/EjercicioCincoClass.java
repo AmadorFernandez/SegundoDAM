@@ -68,7 +68,7 @@ public class EjercicioCincoClass extends AppCompatActivity {
             }
         });
 
-        //Pasamos el diccionario al hacer click
+        //I send the diccionary to second Activity
         btnAbrirDiccionario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

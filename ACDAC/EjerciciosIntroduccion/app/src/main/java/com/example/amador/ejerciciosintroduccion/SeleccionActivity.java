@@ -20,10 +20,12 @@ public class SeleccionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seleccion);
         inicializar();
+
+
     }
 
     //Selecciona la Activity a lanzar en cada caso
-    private void inicializar() {
+    private void inicializar(){
 
         btnUno = (Button)findViewById(R.id.btnEjUno);
         btnUno.setOnClickListener(new View.OnClickListener() {

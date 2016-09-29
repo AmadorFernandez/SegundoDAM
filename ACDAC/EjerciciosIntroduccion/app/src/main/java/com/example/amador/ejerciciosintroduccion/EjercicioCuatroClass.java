@@ -13,9 +13,6 @@ import android.widget.TextView;
 
 public class EjercicioCuatroClass extends AppCompatActivity {
 
-
-
-
     Button btnSumarTiempo, btnRestarTiempo, btnStar;
     TextView txvCrono, txtNCafeces, txtAlerta;
     Switch asignador;
@@ -149,7 +146,7 @@ public class EjercicioCuatroClass extends AppCompatActivity {
       @Override
       public void onTick(long millisUntilFinished) {
 
-          // Posición 0 minutos y 1 segundos
+          // Posición [0] minutos y [1] segundos
           long[] time = new long[2];
 
 

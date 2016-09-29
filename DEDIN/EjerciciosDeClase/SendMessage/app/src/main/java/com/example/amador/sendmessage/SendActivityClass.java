@@ -3,6 +3,7 @@ package com.example.amador.sendmessage;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,9 +11,9 @@ import android.widget.Toast;
 
 public class SendActivityClass extends AppCompatActivity  {
 
-    Button btnEnvioCon;
-    EditText edMensajeCon;
-    String mensaje;
+    private Button btnEnvioCon;
+    private EditText edMensajeCon;
+    private String mensaje;
 
 
     @Override
@@ -23,44 +24,34 @@ public class SendActivityClass extends AppCompatActivity  {
 
     }
 
-    // Asignar las memorias de los objetos y los vincula
+    // Inicialize the instances
     protected void enlazarMemorias(){
 
         btnEnvioCon = (Button)findViewById(R.id.btnEnvio);
         edMensajeCon = (EditText)findViewById(R.id.edTexto);
-        mensaje = "";
+        mensaje = " ";
 
     }
 
 
-    // Contiene la secuencia de instrucciones a ejecutar cuando el usuario pulse el botón
-
+    // Contain the secuences of instruccion that it will be executed
     public void getEvent(View view) {
 
-        Bundle pelota = new Bundle();
-        pelota.putString("message", edMensajeCon.getText().toString());
 
+        Intent llamada = new Intent(SendActivityClass.this, ReceiverActivityClass.class);
+        mensaje = edMensajeCon.getText().toString();
 
-
-        /* Objeto para la llamada uso del constructor de dos parametros
-         * el primero es el Context y el segundo es la clase a la que va destinado */
-        Intent llamada = new Intent(getApplicationContext(), ReceiverActivityClass.class);
-      //  mensaje = edMensajeCon.getText().toString(); //Asigna el texto del control a la variable
-
-        llamada.putExtras(pelota);
-        startActivity(llamada);
-
-        // Comprueba si se ha escrito algo o no (Se ha podido pulsar el boton por accidente)
+        // it condition verfy that the message is not in empty
         if(!mensaje.isEmpty()){
 
-            // Asigna el nombre "parametro" al mensaje para recuperarlo por su nombre desde la siguiente actividad
-          //  llamada.putExtra("parametro", mensaje);
-          //  startActivity(llamada); //Lanzamos la llamada a la segunda actividad
+            // Go
+            llamada.putExtra("parametro", mensaje);
+            startActivity(llamada); //Lanzamos la llamada a la segunda actividad
 
 
         }else{
 
-            // Avisa al usuario que ha pulsado sin introducir ningun texto
+            // Informs the user that the text is empty
             Toast.makeText(getApplicationContext(), "No hay texto introducido pringao", Toast.LENGTH_SHORT).show();
         }
 
