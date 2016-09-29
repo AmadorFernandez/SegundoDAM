@@ -27,8 +27,7 @@ public class InfoPalabraClass extends AppCompatActivity {
     private void inicializar() {
 
         View header = (View) getLayoutInflater().inflate(R.layout.layout_cabezera, null);
-        palabras = getIntent().getExtras().getStringArrayList("parametroUno");
-        DiccionarioAdapter adapter = new DiccionarioAdapter(InfoPalabraClass.this, palabras);
+        DiccionarioAdapter adapter = new DiccionarioAdapter(InfoPalabraClass.this);
         livListaPalabras = (ListView) findViewById(R.id.listPalabras);
         livListaPalabras.addHeaderView(header);
         livListaPalabras.setAdapter(adapter);

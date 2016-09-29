@@ -32,10 +32,10 @@ public class DiccionarioAdapter extends ArrayAdapter {
 
 
     //Envia al constructor de la clase padre los parametros e inicializa los suyos
-   public DiccionarioAdapter(Context context, ArrayList<String> datos){
-       super(context,R.layout.layout_list_palabras, datos);
+   public DiccionarioAdapter(Context context){
+       super(context,R.layout.layout_list_palabras, DiccionarioSingle.getDiccionario());
        this.context = context;
-       this.datos = datos;
+       datos = DiccionarioSingle.getDiccionario();
 
    }
 

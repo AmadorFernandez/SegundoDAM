@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 public class EjercicioCincoClass extends AppCompatActivity {
 
     Palabra p;
-    ArrayList<String> diccionario;
+    DiccionarioSingle diccionario;
     EditText edtPalabra;
     Button btnRecogerPalabra, btnAbrirDiccionario;
 
@@ -39,8 +39,7 @@ public class EjercicioCincoClass extends AppCompatActivity {
         edtPalabra = (EditText)findViewById(R.id.edtPalabra);
         btnRecogerPalabra = (Button)findViewById(R.id.btnGuaPalabra);
         btnAbrirDiccionario = (Button)findViewById(R.id.btnAbrirDiccionario);
-        diccionario = new ArrayList<String>();
-
+        diccionario = DiccionarioSingle.getDiccionario();
 
 
         //Recoge el valor del campo al hacer click
@@ -74,7 +73,6 @@ public class EjercicioCincoClass extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(getApplicationContext(), InfoPalabraClass.class);
-                i.putExtra("parametroUno", diccionario);
                 startActivity(i);
 
             }
