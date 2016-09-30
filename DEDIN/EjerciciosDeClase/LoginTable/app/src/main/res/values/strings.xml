@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">LoginTable</string>
-    <string name="tvwUser">Usuario</string>
-    <string name="edtUser">Contreña</string>
-    <string name="tvwPwr">Contraseña</string>
-    <string name="chkRemeber">Recordar contreña</string>
-    <string name="Ok">OK</string>
-    <string name="Cancel">Cancelar</string>
-</resources>
