@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">LoginTable</string>
-    <string name="textUser">Usuario</string>
-    <string name="textPwd">Contraseña</string>
-    <string name="Recordar">Recordar</string>
-    <string name="textBtnAceptar">Aceptar</string>
-    <string name="textBtnCancelar">Cancelar</string>
-</resources>

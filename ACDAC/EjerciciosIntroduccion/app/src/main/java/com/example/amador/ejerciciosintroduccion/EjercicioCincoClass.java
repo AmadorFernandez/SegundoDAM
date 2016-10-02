@@ -136,7 +136,7 @@ public class EjercicioCincoClass extends AppCompatActivity {
     //Valida que solo tenga los caracteres permitidos en una palabra (nada de números ni signos)
     private boolean validarExpresion(String palabra){
 
-        return palabra.matches("^[a-zA-Z_áéíóúñ\\s]*$");
+        return palabra.matches("^[a-zA-Z_áéíóúñ \\s]*$");
 
     }
 

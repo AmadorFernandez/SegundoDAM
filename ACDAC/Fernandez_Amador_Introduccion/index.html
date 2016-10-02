@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	
+	<meta charset="utf-8">
+	<head>
+		
+		<link rel="stylesheet" type="text/css"  href="./css/stilos.css">
+		
+	</head>
+		
+		
+		
+		
+	<body>
+		
+		<div>
+		
+		<h1>Ejercicio 5 ACATD</h1>
+		<h3><a href="https://AmadorFernandez@bitbucket.org/AmadorFernandez/ejerciciosintroduccion.git" >Enlace al repositorio</a></h3>
+		
+		<div id="principal">
+		
+		
+		
+		<p>
+			
+			Se trata de un simple ejercicio donde se nos pide que ingresemos una palabra y una vez intruducida, podremos ver en una lista,
+			todas las palabras que hallamos introducido. <br/><br/>
+			
+			
+		
+			
+			
+		</p><br/>
+		
+			<img src="./img/respuesta_guardada.png"  />
+			<img src="./img/principal.png"  />
+			<img src="./img/confirmar_guardar.png"  />
+			<img src="./img/lista_palabras.png"  /><br/><br/>
+		
+		<p>
+			
+			Además, si intentamos guardar una palabra que ya estaba incluida en el diccionario o que no es una palabra el sistema no la guarda
+			y nos imforma de ello. <br/><br/>
+			
+			
+		</p><br/>
+		
+			<img src="./img/palabra_blanco.png"  />
+			<img src="./img/palabra_repe.png"  />
+			<br/><br/>
+		
+		<p>
+			
+			Una vez en la lista, si pulsamos sobre el botón guardar de una palabra, esta se borra. Si, por el contrario, pulsamos sobre el icono de
+			la RAE, un popup nos muestra información sobre la palabra (Nº de caracteres y si es o no palindromo) y nos da la opción para enviarnos
+			a la WEB de la RAE y ver su significado si lo tuviera. <br/><br/>
+			
+			
+			
+			
+			
+		</p><br/>
+		
+		
+		
+			<img src="./img/borrar.png"  />
+			<img src="./img/info_no_palindromo.png"  />
+			<img src="./img/info_si_palindromo.png"  />
+			<img src="./img/rae.png"  />
+			
+	
+			
+			<br/><br/>
+		
+		<h1>Como he hecho este ejercicio</h1>
+	
+		<p id="explicacion">
+			
+			Para guardar las palabras, cree una clase propia que heredaba de ArrayList y que implementaba el patrón Singleton<br/>
+			de este modo, me aseguro de tener el mismo objeto desde diferentes Activitys. <br/><br/>
+			
+			Después de pedir confirmación al usuario para guardar la palabra, me aseguro de que la palabra no este en blanco<br/>
+			con el método isEmpty de la clase String, que no este repetida con el metodo heredado contain de mi clase propia<br/>
+			y de que cumpla con una expresión regular con el método macht de la clase String. De ese modo, evito que se <br/>
+			introduzcan palabras con caracteres raros o números.<br/><br/>
+			
+			La segunda Activity incorpora un ListView que mediante un adapter personalizado, es inflado con los xml que <br/>
+			contienen la estructura de dos botones y un TextView en el que se guarda la palabra. <br/><br/>
+			
+			Para obterner inforamación de la palabra, creo mi propia clase Palabra, y mediante el metodo size de la Clase<br/>
+			String y un método propio llamado esPalintromo se optiene la información y se guarda en sus correspondientes<br/>
+			campos para posterior mete ser mostrados.<br/><br/>
+			
+			Por último, una tercera Activity con un WebView y una constante que contiene la URL de la RAE son los encargados<br/>
+			de mostrar la página con el significado de la palabra, ya que a la constante de la URL se le concatena la palabra.
+			
+		</p>
+	
+		
+		
+		
+		</div>
+		
+		</div>
+		
+		
+	</body>
+	
+</html>
