@@ -1,0 +1,7 @@
+#Fri Sep 30 23:59:09 CEST 2016
+base.0=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_215fcef449888fd62e608d97c75ed1dbfd2b05c1
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e2ea23cac2dcae68598ba1f6511d54acc30eb68/classes.dex
+base.1=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e2ea23cac2dcae68598ba1f6511d54acc30eb68
+file.0=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_215fcef449888fd62e608d97c75ed1dbfd2b05c1/classes.dex
