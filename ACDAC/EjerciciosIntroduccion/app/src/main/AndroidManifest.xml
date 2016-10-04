@@ -27,7 +27,9 @@
         <activity android:name=".CambioRatio" />
         <activity android:name=".EjercicioDosClass" />
         <activity android:name=".EjercicioTresClass" />
-        <activity android:name=".EjercicioCuatroClass" />
+        <activity android:name=".EjercicioCuatroClass"
+
+            />
         <activity android:name=".EjercicioCincoClass" />
         <activity android:name=".InfoPalabraClass" />
         <activity android:name=".WebActivityClass"></activity>

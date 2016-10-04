@@ -2,6 +2,7 @@ package com.example.amador.ejerciciosintroduccion;
 
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
+import android.os.PersistableBundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.io.Serializable;
 
 public class EjercicioCuatroClass extends AppCompatActivity {
 
@@ -24,6 +27,8 @@ public class EjercicioCuatroClass extends AppCompatActivity {
     Crono crono;
     boolean ascendente;
     boolean activo;
+    long interval;
+
 
 
 
@@ -32,6 +37,38 @@ public class EjercicioCuatroClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejercicio_cuatro);
         inicializar();
+
+    }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putLong("paramOne", interval);
+        outState.putBoolean("paramTwo", !btnStar.isEnabled());
+        outState.putByte("paramTree", nCafes);
+
+
+
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+            super.onRestoreInstanceState(savedInstanceState);
+
+        if(savedInstanceState.getBoolean("paramTwo")){
+
+            nCafes = savedInstanceState.getByte("paranTre");
+            crono = new Crono(savedInstanceState.getLong("paramOne"),10);
+            actualizarTiempo();
+            crono.start();
+            btnSumarTiempo.setEnabled(false);
+            btnRestarTiempo.setEnabled(false);
+            btnStar.setEnabled(false);
+
+        }
+
 
     }
 
@@ -105,7 +142,9 @@ public class EjercicioCuatroClass extends AppCompatActivity {
                     btnRestarTiempo.setEnabled(false);
                     btnStar.setEnabled(false);
                     crono = new Crono(minutos * 60 * 1000, 10);
+                    actualizarTiempo();
                     crono.start();
+
 
                 }
 
@@ -124,10 +163,10 @@ public class EjercicioCuatroClass extends AppCompatActivity {
     }
 
 
-    public class Crono extends CountDownTimer{
+    public  class Crono extends CountDownTimer {
 
 
-      long total, intervalo;
+       public long total, intervalo;
 
 
       /**
@@ -141,6 +180,8 @@ public class EjercicioCuatroClass extends AppCompatActivity {
           super(millisInFuture, countDownInterval);
 
           total = millisInFuture;
+
+
       }
 
       @Override
@@ -148,7 +189,7 @@ public class EjercicioCuatroClass extends AppCompatActivity {
 
           // Posición [0] minutos y [1] segundos
           long[] time = new long[2];
-
+            interval = millisUntilFinished;
 
           // Verifica el sentido de la cuenta
           if(ascendente){
@@ -163,6 +204,7 @@ public class EjercicioCuatroClass extends AppCompatActivity {
           //Se fracciona y actualiza el tiempo
           fraccionarTiempo(time);
           txvCrono.setText(String.format("%02d", time[0]) + ":" + String.format("%02d", time[1]));
+
 
       }
 
