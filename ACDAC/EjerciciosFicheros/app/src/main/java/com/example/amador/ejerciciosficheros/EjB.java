@@ -1,29 +1,32 @@
 package com.example.amador.ejerciciosficheros;
 
 import android.content.Context;
-import android.provider.ContactsContract;
-import android.support.v7.app.AppCompatActivity;
+import android.content.pm.ApplicationInfo;
+import android.os.Environment;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Locale;
+import java.util.StringTokenizer;
 
-public class EjA extends AppCompatActivity implements View.OnClickListener {
+public class EjB extends AppCompatActivity implements View.OnClickListener {
+
 
     private Button btnSum;
     private TextView txvResult, txvInfo;
@@ -32,42 +35,48 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eja);
+        setContentView(R.layout.activity_ejb);
         inicializar();
+
     }
 
     private void inicializar() {
 
-        btnSum = (Button)findViewById(R.id.btnSum);
+        btnSum = (Button)findViewById(R.id.btnSumExternal);
         btnSum.setOnClickListener(this);
-        txvResult = (TextView) findViewById(R.id.txvResult);
-        txvInfo = (TextView) findViewById(R.id.txvInfo);
+        txvResult = (TextView) findViewById(R.id.txvResultExternal);
+        txvInfo = (TextView) findViewById(R.id.txvInfoExternal);
     }
-
-
 
     @Override
     public void onClick(View v) {
 
+
         String vA, vB;
         Double result;
 
-        vA = ((EditText)findViewById(R.id.edtFirstData)).getText().toString();
-        vB = ((EditText)findViewById(R.id.edtSeconData)).getText().toString();
+        if(checkExternalWhrite()) {
 
-        if(checkValues(vA, vB)){
+            vA = ((EditText) findViewById(R.id.edtFirstDataExternal)).getText().toString();
+            vB = ((EditText) findViewById(R.id.edtSeconDataExternal)).getText().toString();
 
-            result = Operation.sum(a, b);
-            writeInFile(String.valueOf(result));
-            txvInfo.setText("Resultado: "+readFile()+stracInfoFile());
+            if (checkValues(vA, vB)) {
 
+                result = Operation.sum(a, b);
+                writeInFile(String.valueOf(result));
+                txvInfo.setText("Resultado: " + readFile() + stracInfoFile());
+
+            } else {
+
+                launchToast("Error en los datos introducidos");
+
+            }
         }else{
 
-            launchToast("Error en los datos introducidos");
+            launchToast("La memoria externa no esta disponible");
 
         }
 
@@ -101,6 +110,7 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
             return valido;
 
+
         }
 
 
@@ -110,12 +120,20 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
     private void writeInFile(String text){
 
-        FileOutputStream fileWrite = null;
+        File filePath = null;
+        File fileInfo = null;
+        OutputStreamWriter objWriter = null;
 
         try {
 
-            fileWrite = openFileOutput(FILE_NAME, Context.MODE_PRIVATE);
-            fileWrite.write(text.getBytes());
+            filePath = Environment.getExternalStorageDirectory();
+            fileInfo = new File(filePath.getAbsolutePath(), FILE_NAME);
+            objWriter = new OutputStreamWriter(new FileOutputStream(fileInfo));
+
+            objWriter.write(text);
+
+
+
 
         } catch (FileNotFoundException e) {
 
@@ -128,11 +146,11 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
         }finally {
 
-            if(fileWrite != null){
+            if(objWriter != null){
 
                 try {
 
-                    fileWrite.close();
+                    objWriter.close();
 
                 } catch (IOException e) {
 
@@ -149,11 +167,15 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
         String text = "";
         BufferedReader reader = null;
+        File filePath = null;
+        File fileInfo = null;
 
         try {
 
 
-            reader = new BufferedReader(new InputStreamReader(openFileInput(FILE_NAME)));
+            filePath = Environment.getExternalStorageDirectory();
+            fileInfo = new File(filePath.getAbsolutePath(), FILE_NAME);
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileInfo)));
             text = reader.readLine();
 
 
@@ -163,7 +185,7 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
         } catch (IOException e) {
 
-           launchToast("Error de entrada salida");
+            launchToast("Error de entrada salida");
 
         }finally {
 
@@ -191,15 +213,19 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
     }
 
+
+
     private String stracInfoFile(){
 
         String info = "\n";
+        File filePath = null;
         File fileInfo = null;
         Calendar c = Calendar.getInstance();
         SimpleDateFormat sdfParser = new SimpleDateFormat("dd/mm/yyyy HH:mm:ss", new Locale("ES"));
 
 
-        fileInfo = new File(getFilesDir(), FILE_NAME);
+        filePath = Environment.getExternalStorageDirectory();
+        fileInfo = new File(filePath.getAbsolutePath(), FILE_NAME);
         c.setTimeInMillis(fileInfo.lastModified());
 
 
@@ -217,4 +243,46 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
         Toast.makeText(getApplicationContext(), ms, Toast.LENGTH_LONG).show();
 
     }
+
+
+    private boolean checkExternalWhrite(){
+
+        String info = Environment.getExternalStorageState();
+        return info.equals(Environment.MEDIA_MOUNTED);
+
+
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

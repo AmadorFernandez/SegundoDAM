@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class SeleccionActivityClass extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnA;
+    Button btnA, btnB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,9 @@ public class SeleccionActivityClass extends AppCompatActivity implements View.On
     private void init() {
 
         btnA = (Button)findViewById(R.id.btnEjA);
+        btnB = (Button)findViewById(R.id.btnEjB);
         btnA.setOnClickListener(this);
+        btnB.setOnClickListener(this);
 
     }
 
@@ -35,7 +37,10 @@ public class SeleccionActivityClass extends AppCompatActivity implements View.On
                 i = new Intent(SeleccionActivityClass.this, EjA.class);
                 startActivity(i);
                 break;
-
+            case R.id.btnEjB:
+                i = new Intent(SeleccionActivityClass.this, EjB.class);
+                startActivity(i);
+                break;
         }
 
     }
