@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.amador.logintable.test" >
+    package="com.amador.logintable.test" >
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="16" />
+        android:targetSdkVersion="21" />
 
     <instrumentation
         android:name="android.support.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.example.amador.logintable"
-        android:targetPackage="com.example.amador.logintable" />
+        android:label="Tests for com.amador.logintable"
+        android:targetPackage="com.amador.logintable" />
 
     <application>
         <uses-library android:name="android.test.runner" />

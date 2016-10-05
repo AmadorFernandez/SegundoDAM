@@ -8,140 +8,97 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.amador.logintable.LoginActivity"
-
-
-    >
-
+    android:stretchColumns="1"
+    tools:context="com.amador.LoginTable.Login_Activity">
 
     <TableRow
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-
-        >
+        android:layout_height="match_parent" >
 
         <TextView
-
+            android:layout_column="0"
+            android:text="@string/txtUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/textUser"
-            android:id="@+id/txvUser"
-
-            />
+            android:id="@+id/txtUser" />
 
         <EditText
-
+            android:layout_marginLeft="20dp"
+            android:layout_column="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/edtUser"
-            android:inputType="textPersonName"
-            android:ems="12"
-            android:layout_marginLeft="10dp"
-
-
-            />
-
-
-    </TableRow>
-
-    <TableRow
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txvPwd"
-            android:text="@string/textPwd"
-
-            />
-
-        <EditText
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/edtPwd"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:ems="10"
-            android:layout_marginLeft="10dp"
-
-            />
-
+            android:id="@+id/edtUser" />
     </TableRow>
 
     <TableRow
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
+        android:layout_height="match_parent" >
 
-        >
+        <TextView
+            android:layout_column="0"
+            android:text="@string/txtPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPass" />
+
+        <EditText
+            android:layout_marginLeft="20dp"
+            android:layout_column="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/edtPass" />
+    </TableRow>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/viewDefault"
+        android:background="@color/colorPrimary"
+        android:layout_height="2dp"
+        android:layout_width="match_parent"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
         <CheckBox
-
-            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_column="1"
+            android:text="@string/chbRemember"
             android:layout_width="wrap_content"
-            android:id="@+id/chkRecordar"
-            android:text="@string/Recordar"
-
-
-            />
-
+            android:layout_height="wrap_content"
+            android:id="@+id/chbRemember" />
     </TableRow>
 
     <TableRow
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
         <LinearLayout
-
-
-            android:background="@color/colorAccent"
-            android:gravity="center"
             android:layout_span="2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
 
             <Button
-
+                android:layout_marginRight="20dp"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/btnok"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnAceptar"
-                android:text="@string/textBtnAceptar"
-
-
-                />
+                android:id="@+id/btnOk" />
 
             <Button
-
-                android:id="@+id/btnCancelar"
-                android:text="@string/textBtnCancelar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/btncancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-
-                />
-
+                android:id="@+id/btnCancel" />
         </LinearLayout>
-
-
-
     </TableRow>
-
-
-
-
-
-
 </TableLayout>

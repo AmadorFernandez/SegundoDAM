@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_data">You have to introduce a value</string>
+    <string name="password_digit">The password must contain at least 1 or more digits</string>
+    <string name="password_case">The password must contain uppercase and lowercase letters</string>
+    <string name="password_length">The password must be at least 8 characters long</string>
+</resources>

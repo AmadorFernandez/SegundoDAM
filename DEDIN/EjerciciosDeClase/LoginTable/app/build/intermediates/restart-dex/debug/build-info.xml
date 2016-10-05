@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    api-level="22"
-    density="xhdpi"
+    api-level="21"
+    density="xxxhdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="10340291828789"
-    token="4055784758101895"
+    timestamp="3435084087521"
+    token="-3923028506159252807"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
@@ -22,31 +22,21 @@
         duration="0" />
 
     <build
-        timestamp="7019170941035"
+        timestamp="3318530209276"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/amador/DAM/ACDAC/LoginTable/app/build/outputs/apk/app-debug.apk"
+            location="/home/amador/Escritorio/LoginTable/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="7991251227679"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="10315614667319"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
-    <build
-        timestamp="10340291828789"
+        timestamp="3435084087521"
         verifier="COLD_SWAP_REQUESTED" />
+    <build
+        timestamp="4136104722255"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/amador/Escritorio/LoginTable/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
 
 </instant-run>

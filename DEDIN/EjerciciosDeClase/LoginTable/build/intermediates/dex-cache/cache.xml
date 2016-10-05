@@ -3,39 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jar="/home/amador/Escritorio/LoginTable/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="34fd1504852fd3046d66216240e1599d71ea0d3f">
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cd561f1bf1598fad44082980d07dbb7fc908410a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/LoginTable/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_9976174786264169a252c0d06e0c0d44b1b83fad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/LoginTable/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_d5db4db3360f5315fe3ffa516c0ce14edcab0315/classes.dex" />
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_836fca373e410038fb1f6c75ae4beef9e9e5eb20/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jar="/home/amador/Escritorio/LoginTable/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_92b9bf1bdb7de2a5e7919f24a2a26ce8056e9977/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6aeb47d3991f2ca32d9f635a64b5ca6e340b4b22">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_215fcef449888fd62e608d97c75ed1dbfd2b05c1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_2dfad4fb20a1fa99c85a9e90f1b103293036e740/classes.dex" />
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_c2d613138eef51d6a09dd4b691f4e30b1e011153/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -44,34 +44,34 @@
         optimize="true"
         revision="23.0.3"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_629d7cd2ecdf737c4901c64c62cdeb957d573245/classes.dex" />
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_629d7cd2ecdf737c4901c64c62cdeb957d573245/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/amador/Escritorio/LoginTable/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="f4a0da2f7c5faca52787e8b1aaafd34b91019e02">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e2ea23cac2dcae68598ba1f6511d54acc30eb68/classes.dex" />
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_416775df4034ce62acbbf48c7107b5af492f073d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jar="/home/amador/Escritorio/LoginTable/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_29bedfe0f0bcacb73be2e81752c40b2a6e2fd5d1/classes.dex" />
+        sha1="bc5fdd5feef9e9088c65ce4f045dd1091d71c853">
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9cc3f15f247932f5d14459f8f52cbd9d41d78a35/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jar="/home/amador/Escritorio/LoginTable/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_a708b468741929e63e79d0db289da98dc28bfd02/classes.dex" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_3ca659f2d861dcce5f213d84a5aab260cc256e9f/classes.dex" />
     </item>
 
 </items>

@@ -62,7 +62,7 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
 
             result = Operation.sum(a, b);
             writeInFile(String.valueOf(result));
-            txvInfo.setText(readFile()+stracInfoFile());
+            txvInfo.setText("Resultado: "+readFile()+stracInfoFile());
 
         }else{
 
@@ -195,14 +195,14 @@ public class EjA extends AppCompatActivity implements View.OnClickListener {
         String info = "\n";
         File fileInfo = null;
         Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdfParser = new SimpleDateFormat("HH:mm:ss", new Locale("ES"));
+        SimpleDateFormat sdfParser = new SimpleDateFormat("dd/mm/yyyy HH:mm:ss", new Locale("ES"));
 
 
         fileInfo = new File(getFilesDir(), FILE_NAME);
         c.setTimeInMillis(fileInfo.lastModified());
 
 
-        info += "\n Ruta al fichero: "+fileInfo.getAbsolutePath()+"\nFecha de la última modificación: "+
+        info += "Ruta al fichero: "+fileInfo.getAbsolutePath()+"\nFecha de la última modificación: "+
                 sdfParser.format(c.getTime())+"\nTamaño del fichero: "+fileInfo.length()+" Bytes";
 
 

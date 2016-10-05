@@ -1,7 +1,7 @@
-#Fri Sep 30 23:59:09 CEST 2016
-base.0=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_215fcef449888fd62e608d97c75ed1dbfd2b05c1
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e2ea23cac2dcae68598ba1f6511d54acc30eb68/classes.dex
-base.1=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e2ea23cac2dcae68598ba1f6511d54acc30eb68
-file.0=/home/amador/DAM/ACDAC/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_215fcef449888fd62e608d97c75ed1dbfd2b05c1/classes.dex
+#Wed Oct 05 19:47:32 CEST 2016
+base.0=/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cd561f1bf1598fad44082980d07dbb7fc908410a
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9cc3f15f247932f5d14459f8f52cbd9d41d78a35/classes.dex
+base.1=/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9cc3f15f247932f5d14459f8f52cbd9d41d78a35
+file.0=/home/amador/Escritorio/LoginTable/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cd561f1bf1598fad44082980d07dbb7fc908410a/classes.dex
