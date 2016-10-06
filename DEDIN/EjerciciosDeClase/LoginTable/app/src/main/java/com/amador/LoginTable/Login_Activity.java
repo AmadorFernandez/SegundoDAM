@@ -7,24 +7,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import com.amador.LoginTable.controllers.LoginMVC;
 import com.amador.LoginTable.controllers.Login_Activity_Controller;
 
 public class Login_Activity extends AppCompatActivity {
 
-    private Login_Activity_Controller login_activity_controller;
-
+    private LoginMVC loginMVC;
     private EditText edtUser;
     private EditText edtPass;
     private Button btnOk;
     private Button btnCancel;
 
+
+    // Inicializate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        login_activity_controller = new Login_Activity_Controller();
+        loginMVC = new Login_Activity_Controller();
 
         edtUser = (EditText)findViewById(R.id.edtUser);
         edtPass = (EditText)findViewById(R.id.edtPass);
@@ -36,11 +37,14 @@ public class Login_Activity extends AppCompatActivity {
             public void onClick(View v) {
                 String user = edtUser.getText().toString();
                 String pass = edtPass.getText().toString();
+
+                //Verify that the camps is correct
                 if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass)) {
                     Toast.makeText(Login_Activity.this, getResources().getString(R.string.empty_data), Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    int result = login_activity_controller.validateCredentials(user, pass);
+                    //Capture the validation
+                    int result = loginMVC.validateCredentials(pass);
                     switch (result) {
                         case Login_Activity_Controller.PASSWORD_DIGIT:
                             Toast.makeText(Login_Activity.this, getResources().getString(R.string.password_digit), Toast.LENGTH_SHORT).show();

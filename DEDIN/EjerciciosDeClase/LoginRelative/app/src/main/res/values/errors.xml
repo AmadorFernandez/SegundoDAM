@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="data_no_number">Tienes que usar al menos un numero en la contraseña</string>
+    <string name="data_case">Debe usar al menos una mayuscula o una minuscula</string>
+    <string name="data_length">Minimo 8 caracteres</string>
+    <string name="data_empty">Los campos estan vacios</string>
+
+</resources>

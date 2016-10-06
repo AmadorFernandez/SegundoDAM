@@ -41,7 +41,7 @@
         android:text="@string/text_pwd"
         android:layout_below="@+id/txvUser"
         android:layout_marginTop="@dimen/widgedt_margin_top"
-        />kill 
+        />
 
     <EditText
 
@@ -81,7 +81,7 @@
 
 
         <Button
-            android:id="@+id/btnOk"
+            android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@android:string/cancel"
@@ -90,7 +90,7 @@
             />
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/btnOK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@android:string/ok"

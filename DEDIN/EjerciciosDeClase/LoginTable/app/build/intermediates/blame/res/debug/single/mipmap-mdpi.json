@@ -2,5 +2,9 @@
     {
         "merged": "/home/amador/Escritorio/LoginTable/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
         "source": "/home/amador/Escritorio/LoginTable/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/LoginTable/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/LoginTable/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     }
 ]
