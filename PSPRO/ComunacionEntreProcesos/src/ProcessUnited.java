@@ -101,7 +101,8 @@ public class ProcessUnited {
 			
 			while ((resultA = exitOne.readLine()) != null) {
 				
-				entryTwo.write(resultA+"\n");
+				entryTwo.write(resultA);
+				entryTwo.newLine();
 				
 			}
 			
@@ -124,6 +125,7 @@ public class ProcessUnited {
 			
 			//Close Stream
 			exitTwo.close();
+			
 			
 			//Obtain the end codes with which they have completed
 			
