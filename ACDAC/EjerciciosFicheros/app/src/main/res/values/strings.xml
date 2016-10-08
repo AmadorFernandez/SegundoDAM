@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EjerciciosFicheros</string>
+    <string name="data_one">Primer operando</string>
+    <string name="data_two">Segundo operando</string>
+</resources>

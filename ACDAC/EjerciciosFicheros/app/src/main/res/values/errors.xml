@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="data_error">Revise los campos</string>
+    <string name="not_search_file">Archivo no encontrado</string>
+    <string name="io_error">Error en la escritura del archivo</string>
+
+</resources>
