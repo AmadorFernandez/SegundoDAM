@@ -2,4 +2,6 @@
     <string name="app_name">EjerciciosFicheros</string>
     <string name="data_one">Primer operando</string>
     <string name="data_two">Segundo operando</string>
+    <string name="path_res_raw">/res/raw/datos.txt</string>
+    <string name="path_assets">/assets/datos.txt</string>
 </resources>

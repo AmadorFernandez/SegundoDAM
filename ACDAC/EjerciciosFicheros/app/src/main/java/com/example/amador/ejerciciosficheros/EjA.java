@@ -1,20 +1,13 @@
 package com.example.amador.ejerciciosficheros;
 
 import android.content.Context;
-import android.media.Image;
-import android.os.StrictMode;
-import android.support.annotation.StringDef;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,7 +17,6 @@ import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Locale;
 
 public class EjA extends AppCompatActivity {
@@ -34,6 +26,7 @@ public class EjA extends AppCompatActivity {
     private EditText edtFirstNumber, edtSecondNumber;
     private ImageButton ibt;
     private TextView txvResultados;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +38,10 @@ public class EjA extends AppCompatActivity {
     private void init() {
 
 
-        txvResultados = (TextView)findViewById(R.id.txvResultado);
-        ibt = (ImageButton)findViewById(R.id.ibtnSum);
-        edtFirstNumber = (EditText)findViewById(R.id.edtFirstData);
-        edtSecondNumber = (EditText)findViewById(R.id.edtSecontData);
+        txvResultados = (TextView) findViewById(R.id.txvResultado);
+        ibt = (ImageButton) findViewById(R.id.ibtnSum);
+        edtFirstNumber = (EditText) findViewById(R.id.edtFirstData);
+        edtSecondNumber = (EditText) findViewById(R.id.edtSecontData);
 
         ibt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,24 +49,23 @@ public class EjA extends AppCompatActivity {
 
                 Double a = 0.0;
                 Double b = 0.0;
-                ArrayList<String>  list;
+                ArrayList<String> list;
                 String linea = "";
 
                 try {
                     a = Double.parseDouble(String.valueOf(edtFirstNumber.getText()));
                     b = Double.parseDouble(String.valueOf(edtSecondNumber.getText()));
 
-                    writeInFile(String.valueOf(Operation.sum(a,b)));
+                    writeInFile(String.valueOf(Operation.sum(a, b)));
                     list = readInFile();
 
 
-                    for(int i = 0; i < list.size(); i++){
+                    for (int i = 0; i < list.size(); i++) {
 
                         linea += list.get(i) + "\n";
                         txvResultados.setText(linea);
 
                     }
-
 
 
                 } catch (NumberFormatException e) {
@@ -84,12 +76,9 @@ public class EjA extends AppCompatActivity {
         });
 
 
-
-
-
     }
 
-    private void writeInFile(String text){
+    private void writeInFile(String text) {
 
         OutputStreamWriter outWriter = null;
 
@@ -107,9 +96,9 @@ public class EjA extends AppCompatActivity {
 
             Toast.makeText(EjA.this, R.string.io_error, Toast.LENGTH_LONG).show();
 
-        }finally {
+        } finally {
 
-            if(outWriter != null){
+            if (outWriter != null) {
 
                 try {
                     outWriter.close();
@@ -122,7 +111,7 @@ public class EjA extends AppCompatActivity {
 
     }
 
-    private ArrayList<String> readInFile(){
+    private ArrayList<String> readInFile() {
 
 
         BufferedReader bfReader = null;
@@ -136,9 +125,9 @@ public class EjA extends AppCompatActivity {
             result = new ArrayList<String>();
 
             fileInfo = new File(getFilesDir(), FILE_NAME);
-            bfReader =  new BufferedReader(new InputStreamReader(openFileInput(FILE_NAME)));
+            bfReader = new BufferedReader(new InputStreamReader(openFileInput(FILE_NAME)));
             result.add("Resultado: " + bfReader.readLine());
-            result.add("Ruta" + fileInfo.getAbsolutePath());
+            result.add("Ruta: " + fileInfo.getAbsolutePath());
             c.setTimeInMillis(fileInfo.lastModified());
             sdf = new SimpleDateFormat("dd/mm/yyyy HH:mm:ss", new Locale("ES"));
             result.add("Última modificación" + sdf.format(c.getTime()));
@@ -152,9 +141,9 @@ public class EjA extends AppCompatActivity {
         } catch (IOException e) {
 
             Toast.makeText(EjA.this, R.string.io_error, Toast.LENGTH_LONG).show();
-        }finally {
+        } finally {
 
-            if(bfReader != null){
+            if (bfReader != null) {
 
                 try {
                     bfReader.close();
@@ -166,7 +155,6 @@ public class EjA extends AppCompatActivity {
 
             return result;
         }
-
 
 
     }

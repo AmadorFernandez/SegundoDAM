@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ejc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.amador.ejerciciosficheros.EjC">
+
+
+
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtFirstDataC"
+            android:hint="@string/data_one"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/top_edt"
+            android:inputType="numberDecimal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txvInternalPath"
+
+            />
+
+        <TextView
+            android:id="@+id/txvExternalPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/edtFirstDataC"
+            android:layout_marginTop="@dimen/top_edt"
+
+
+            />
+
+    <TextView
+        android:id="@+id/txvInternalPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+
+        />
+
+
+
+        <EditText
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtSecontDataC"
+            android:hint="@string/data_two"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/top_edt"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/txvExternalPath"
+            android:layout_centerHorizontal="true"
+
+
+            />
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtThirdDataC"
+            android:hint="@string/data_one"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/top_edt"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/txvResRaw"
+            android:layout_centerHorizontal="true"
+            />
+
+    <TextView
+        android:id="@+id/txvResRaw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/edtSecontDataC"
+        android:text="@string/path_res_raw"
+
+        />
+
+    <TextView
+        android:id="@+id/txvResAssets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/edtThirdDataC"
+        android:text="@string/path_assets"
+
+        />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtFourthDataC"
+            android:hint="@string/data_one"
+            android:ems="10"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/top_edt"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/txvResAssets"
+            android:layout_centerHorizontal="true"
+
+            />
+
+
+
+
+    <Button
+        android:id="@+id/btnAddInternalFile"
+        android:layout_width="@dimen/float_button_dimen"
+        android:layout_height="@dimen/float_button_dimen"
+        android:layout_toRightOf="@+id/edtFirstDataC"
+        android:background="@drawable/file_add"
+        android:layout_marginLeft="@dimen/top_edt"
+        android:layout_alignTop="@+id/edtFirstDataC"
+
+        />
+
+    <Button
+        android:id="@+id/btnAddExternallFile"
+        android:layout_width="@dimen/float_button_dimen"
+        android:layout_height="@dimen/float_button_dimen"
+        android:layout_toRightOf="@+id/edtSecontDataC"
+        android:layout_alignTop="@+id/edtSecontDataC"
+        android:background="@drawable/file_add"
+        android:layout_marginLeft="@dimen/top_edt"
+
+
+        />
+
+    <TextView
+        android:id="@+id/edtSaveResultInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtFourthDataC"
+        android:layout_marginTop="@dimen/top_edt"
+        />
+
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/ibtnSumC"
+        android:layout_width="@dimen/float_button_dimen"
+        android:layout_height="@dimen/float_button_dimen"
+        android:background="@drawable/sum_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>

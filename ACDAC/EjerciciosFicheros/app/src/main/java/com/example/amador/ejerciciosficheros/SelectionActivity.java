@@ -39,6 +39,26 @@ public class SelectionActivity extends AppCompatActivity {
 
             }
         });
+
+        imvB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(SelectionActivity.this, EjB.class);
+                startActivity(i);
+
+            }
+        });
+
+        imvC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(SelectionActivity.this, EjC.class);
+                startActivity(i);
+
+            }
+        });
     }
 
 

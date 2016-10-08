@@ -11,4 +11,17 @@ public class Operation {
         return a + b;
 
     }
+
+    public static Double sum(double[] values){
+
+        Double result = 0.0;
+
+        for(int i = 0; i < values.length; i++){
+
+            result += values[i];
+        }
+
+        return result;
+
+    }
 }
