@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LoginRelative</string>
+    <string name="text_user">Usuario</string>
+    <string name="text_pwd">Contraseña</string>
+    <string name="text_button_ok">OK</string>
+    <string name="text_button_cancel">Cancelar</string>
+    <string name="text_remenber">Recordar</string>
+    <string name="pass_empty">Contraseña vacia</string>
+    <string name="user_empty">El usuario es obligatorio</string>
+    <string name="msg_ok">Login correcto</string>
+
+</resources>
