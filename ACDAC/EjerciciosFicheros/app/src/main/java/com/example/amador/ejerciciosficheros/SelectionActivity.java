@@ -23,6 +23,7 @@ public class SelectionActivity extends AppCompatActivity {
 
     private void init() {
 
+
         imvA = (ImageView)findViewById(R.id.btnA);
         imvB = (ImageView)findViewById(R.id.btnB);
         imvC = (ImageView)findViewById(R.id.btnC);

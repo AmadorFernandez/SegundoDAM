@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LoginRelative</string>
+    <string name="app_name">LoginTextInputLayout</string>
     <string name="text_user">Usuario</string>
     <string name="text_pwd">Contraseña</string>
     <string name="text_button_ok">OK</string>

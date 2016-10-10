@@ -19,6 +19,8 @@
          android:layout_height="wrap_content"
          android:layout_width="match_parent"
          app:errorEnabled="true"
+         android:gravity="left"
+
 
         >
 
@@ -29,10 +31,7 @@
             android:id="@+id/edtUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/widgedt_margin_top"
-            android:layout_alignBaseline="@+id/txvUser"
             android:layout_alignParentRight="true"
-            android:layout_toEndOf="@+id/txvUser"
             android:ems="10"
 
 
@@ -55,9 +54,7 @@
 
         <EditText
 
-            android:layout_toRightOf="@+id/txvPwd"
-            android:layout_toEndOf="@+id/txvPwd"
-            android:layout_alignBaseline="@+id/txvPwd"
+
             android:layout_below="@+id/txvUser"
             android:id="@+id/edtPwd"
             android:hint="@string/text_pwd"
@@ -65,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:layout_marginLeft="@dimen/widgedt_margin_top"
+
             />
 
 
