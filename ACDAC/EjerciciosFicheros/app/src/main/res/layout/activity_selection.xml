@@ -55,4 +55,14 @@
         android:scaleType="fitCenter"
         />
 
+    <ImageView
+        android:id="@+id/btnE"
+        android:layout_width="@dimen/dimen_btn_selection"
+        android:layout_height="@dimen/dimen_btn_selection"
+        android:layout_below="@+id/btnD"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/letra_e"
+        android:scaleType="fitCenter"
+        />
+
 </RelativeLayout>

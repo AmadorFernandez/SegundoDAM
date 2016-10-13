@@ -28,6 +28,7 @@ public class EjB extends AppCompatActivity {
     private EditText edtFirstNumber, edtSecondNumber;
     private ImageButton ibt;
     private TextView txvResultados;
+    Memory fileMemory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +56,14 @@ public class EjB extends AppCompatActivity {
                     Double b = 0.0;
                     ArrayList<String> list;
                     String linea = "";
+                    fileMemory = new Memory(Environment.getExternalStorageDirectory().getAbsolutePath());
 
                     try {
                         a = Double.parseDouble(String.valueOf(edtFirstNumber.getText()));
                         b = Double.parseDouble(String.valueOf(edtSecondNumber.getText()));
 
-                        writeInFile(String.valueOf(Operation.sum(a, b)));
-                        list = readInFile();
+                        fileMemory.writeFile(FILE_NAME ,String.valueOf(Operation.sum(a, b)));
+                        list = fileMemory.infoFile(FILE_NAME);
 
 
                         for (int i = 0; i < list.size(); i++) {
@@ -86,91 +88,6 @@ public class EjB extends AppCompatActivity {
         });
 
 
-
-
-
-    }
-
-    private void writeInFile(String text){
-
-        OutputStreamWriter outWriter = null;
-        File fileInfo = Environment.getExternalStorageDirectory();
-        File fileMount = new File(fileInfo.getAbsolutePath(), FILE_NAME);
-
-
-        try {
-
-            outWriter = new OutputStreamWriter(new FileOutputStream(fileMount));
-            outWriter.write(text);
-
-        } catch (FileNotFoundException e) {
-
-            Toast.makeText(EjB.this, R.string.not_search_file, Toast.LENGTH_LONG).show();
-
-        } catch (IOException e) {
-
-            Toast.makeText(EjB.this, R.string.io_error, Toast.LENGTH_LONG).show();
-
-        }finally {
-
-            if(outWriter != null){
-
-                try {
-                    outWriter.close();
-                } catch (IOException e) {
-
-                }
-            }
-
-        }
-
-    }
-
-    private ArrayList<String> readInFile(){
-
-
-        BufferedReader bfReader = null;
-        ArrayList<String> result = null;
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat sdf = null;
-        File fileInfo = Environment.getExternalStorageDirectory();
-        File fileMount = new File(fileInfo.getAbsolutePath(), FILE_NAME);
-
-        try {
-
-            result = new ArrayList<String>();
-
-
-            bfReader =  new BufferedReader(new InputStreamReader(new FileInputStream(fileMount)));
-            result.add("Resultado: " + bfReader.readLine());
-            result.add("Ruta: " + fileInfo.getAbsolutePath());
-            c.setTimeInMillis(fileInfo.lastModified());
-            sdf = new SimpleDateFormat("dd/mm/yyyy HH:mm:ss", new Locale("ES"));
-            result.add("Última modificación" + sdf.format(c.getTime()));
-            result.add("Tamaño del archivo: " + fileInfo.length() + " bytes");
-
-
-        } catch (FileNotFoundException e) {
-
-            Toast.makeText(EjB.this, R.string.not_search_file, Toast.LENGTH_LONG).show();
-
-        } catch (IOException e) {
-
-            Toast.makeText(EjB.this, R.string.io_error, Toast.LENGTH_LONG).show();
-        }finally {
-
-            if(bfReader != null){
-
-                try {
-                    bfReader.close();
-                } catch (IOException e) {
-
-                }
-
-            }
-
-            return result;
-        }
 
 
 
