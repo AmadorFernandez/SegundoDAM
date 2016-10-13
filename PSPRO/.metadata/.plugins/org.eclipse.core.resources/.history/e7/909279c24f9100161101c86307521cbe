@@ -1,0 +1,29 @@
+
+public class RunThread {
+	
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int pos = 0;
+		int limite = 8;
+		int[] numeros = new int[8];
+		int siguiente = 0;
+		
+		
+		while (pos < limite) {
+			
+			numeros[pos] = pos;
+			numeros[pos+1] = numeros[pos-1] + numeros[pos - 2]
+			
+			
+		}
+		
+		
+		
+
+	}
+
+}

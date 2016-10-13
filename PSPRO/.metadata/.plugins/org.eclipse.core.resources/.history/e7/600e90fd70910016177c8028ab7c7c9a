@@ -1,0 +1,62 @@
+
+public class RunThread {
+	
+    static long[] sucesion;
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n = 200;
+		sucesion = new long[n];
+		CalFibonaci[] hilos = new CalFibonaci[2];
+		sucesion[0] = 0;
+		sucesion[1] = 1;
+		
+		for (int i = 2; i < sucesion.length; i++) {
+			
+			hilos[0] = new CalFibonaci(i, i - 1);
+			hilos[1] = new CalFibonaci(i, i - 2);
+			hilos[0].start();
+			hilos[1].start();
+			try {
+				hilos[0].join();
+				hilos[1].join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			System.out.print(sucesion[i]+", ");
+			
+		}
+		
+		
+		
+	
+		
+		
+
+	}
+
+}
+
+class CalFibonaci extends Thread{
+	
+	
+	int pos;
+	int n;
+    
+	public CalFibonaci(int pos, int n){
+	
+		this.pos = pos;
+		this.n = n;
+	}
+	
+	@Override
+	public void run() {
+		
+		RunThread.sucesion[pos] += RunThread.sucesion[n];
+	     	
+	}
+	
+}

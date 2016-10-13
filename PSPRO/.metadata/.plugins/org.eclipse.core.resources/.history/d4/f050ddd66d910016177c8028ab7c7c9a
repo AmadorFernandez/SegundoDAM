@@ -1,0 +1,49 @@
+
+public class RunThread {
+	
+    static long sucesion = 0;
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		long[] 
+		
+		
+
+	}
+
+}
+
+class CalFibonaci extends Thread{
+	
+    private	int n;
+    private int fiboNumero;
+    
+    public int getFiboNumero(){
+    	
+    	return fiboNumero;
+    	
+    }
+
+    public void setFiboNumero(int value){
+    	
+    	fiboNumero = value;
+    }
+	
+	
+	public CalFibonaci(int n){
+		
+		this.n = n;
+		this.fiboNumero = 1;
+		
+	}
+	
+	@Override
+	public void run() {
+		
+	
+	
+	}
+	
+}
