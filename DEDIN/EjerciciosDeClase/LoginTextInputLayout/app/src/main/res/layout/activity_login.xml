@@ -20,6 +20,10 @@
          android:layout_width="match_parent"
          app:errorEnabled="true"
          android:gravity="left"
+<<<<<<< HEAD
+         app:errorTextAppearance="@style/error"
+=======
+>>>>>>> 6e4ce573379b0fe97cf6cec2d1fb735a7fb84349
 
 
         >
@@ -49,6 +53,10 @@
         android:layout_width="match_parent"
         android:layout_below="@+id/in1"
         app:counterMaxLength="20"
+<<<<<<< HEAD
+        app:errorTextAppearance="@style/error"
+=======
+>>>>>>> 6e4ce573379b0fe97cf6cec2d1fb735a7fb84349
 
         >
 

@@ -8,4 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+<<<<<<< HEAD
+    <style name="error" parent="TextAppearance.AppCompat.Caption">
+
+        <item name="android:textColor">@color/colorError</item>
+
+    </style>
+
+    <style name="hint" parent="TextAppearance.Design.Hint">
+
+        <item name="android:textColor">?android:attr/colorPrimary</item>
+
+    </style>
+
+
+=======
+>>>>>>> 6e4ce573379b0fe97cf6cec2d1fb735a7fb84349
 </resources>

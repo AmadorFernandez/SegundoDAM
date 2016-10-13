@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoginTextInputLayout</string>
+    <string name="data_case">Passwor must contain one or more lowerCase and UpperCase</string>
+    <string name="text_button_cancel">Cancel</string>
+    <string name="text_button_ok">Login</string>
+    <string name="text_pwd">Password</string>
+    <string name="text_remenber">Remenber</string>
+    <string name="text_user">User</string>
+    <string name="user_empty">The user is obligatory</string>
+    <string name="data_empty">The camps are emty</string>
+    <string name="data_length">8 characters minimun</string>
+    <string name="data_no_number">The pass must containt one or more number</string>
+    <string name="msg_ok">Login sucesfully</string>
+    <string name="pass_empty">Pass empty</string>
+</resources>

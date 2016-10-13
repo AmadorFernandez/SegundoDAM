@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LoginTextInputLayout.iml" filepath="$PROJECT_DIR$/LoginTextInputLayout.iml" />
+<<<<<<< HEAD
+=======
       <module fileurl="file://$PROJECT_DIR$/LoginTextInputLayout.iml" filepath="$PROJECT_DIR$/LoginTextInputLayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+>>>>>>> 6e4ce573379b0fe97cf6cec2d1fb735a7fb84349
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

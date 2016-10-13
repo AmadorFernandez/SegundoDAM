@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">LoginRelative</string>
-    <string name="text_user">Usuario</string>
-    <string name="text_pwd">Contraseña</string>
-    <string name="text_button_ok">OK</string>
-    <string name="text_button_cancel">Cancelar</string>
-    <string name="text_remenber">Recordar</string>
-
-</resources>

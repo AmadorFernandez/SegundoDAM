@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+<<<<<<< HEAD
+    <color name="colorAccent_material">#bca70c</color>
+    <color name="colorError">#e70a0a</color>
+    <color name="colorHint">#5FA913</color>
+=======
+>>>>>>> 6e4ce573379b0fe97cf6cec2d1fb735a7fb84349
 </resources>
