@@ -60,6 +60,18 @@ public class SelectionActivity extends AppCompatActivity {
 
             }
         });
+
+        imvD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(SelectionActivity.this, EjD.class);
+                startActivity(i);
+
+            }
+        });
+
+
     }
 
 

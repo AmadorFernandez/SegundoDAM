@@ -11,9 +11,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectionActivity"
-            android:screenOrientation="portrait"
-            >
+        <activity
+            android:name=".SelectionActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +22,10 @@
         </activity>
         <activity android:name=".EjA" />
         <activity android:name=".EjB" />
-        <activity android:name=".EjC"
-            android:screenOrientation="portrait"
-            ></activity>
+        <activity
+            android:name=".EjC"
+            android:screenOrientation="portrait" />
+        <activity android:name=".EjD"></activity>
     </application>
 
 </manifest>

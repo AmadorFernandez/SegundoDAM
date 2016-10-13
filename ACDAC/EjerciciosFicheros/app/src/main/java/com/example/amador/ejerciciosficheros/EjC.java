@@ -30,6 +30,7 @@ public class EjC extends AppCompatActivity {
     private TextView txvExternal, txvInternal, txvSaveResulInfo;
     private static final String FILE_NAME  = "datos.txt";
     private static final String FILE_EXTERNAL_RESULT_INFO = "operaciones.txt";
+    private Memory memoryFiles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,7 @@ public class EjC extends AppCompatActivity {
         edtFour.setEnabled(false);
 
 
+
         if(isFileExits(getFilesDir().getPath())){
 
             edtOne.setText(readInFile(getFilesDir().getPath()));
@@ -71,9 +73,10 @@ public class EjC extends AppCompatActivity {
 
         }
 
-        if(isFileExits(Environment.getExternalStorageDirectory().getPath())){
+        if(Memory.isFileExits(Environment.getExternalStorageDirectory().getPath(), FILE_NAME)){
 
-            edtTwo.setText(readInFile(Environment.getExternalStorageDirectory().getPath()));
+            memoryFiles = new Memory(Environment.getExternalStorageDirectory().getPath());
+            memoryFiles.readInFile(FILE_NAME, edtTwo.getText().toString());
             edtTwo.setEnabled(false);
             btnAddExternalFile.setVisibility(View.INVISIBLE);
             txvExternal.setText(Environment.getExternalStorageDirectory().getPath() + FILE_NAME);
@@ -90,6 +93,7 @@ public class EjC extends AppCompatActivity {
                 String value = String.valueOf(edtTwo.getText());
 
                 if (canReadWriteExternal()) {
+
 
                     if (value.matches("[0-9]+")) {
                         writeInFile(String.valueOf(edtTwo.getText()), Environment.getExternalStorageDirectory().getPath());
@@ -223,7 +227,7 @@ public class EjC extends AppCompatActivity {
 
     }
 
-    private boolean isFileExits(String path){
+    public boolean isFileExits(String path){
 
         File fileInfo = new File(path, FILE_NAME);
         return fileInfo.exists();

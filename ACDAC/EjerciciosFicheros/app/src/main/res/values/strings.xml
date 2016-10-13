@@ -4,4 +4,11 @@
     <string name="data_two">Segundo operando</string>
     <string name="path_res_raw">/res/raw/datos.txt</string>
     <string name="path_assets">/assets/datos.txt</string>
+    <string name="data_file">Fichero</string>
+    <string name="text_explore">Explorar</string>
+    <string name="data_save">Nuevo fichero</string>
+    <string name="text_save">Guardar</string>
+    <string name="utf8">UTF-8</string>
+    <string name="utf16">UTF-16</string>
+    <string name="ISO">ISO-8859-15</string>
 </resources>

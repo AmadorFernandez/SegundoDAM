@@ -166,5 +166,12 @@ public class Memory {
 
     }
 
+    public static boolean isFileExits(String path, String fileName){
+
+        File fileInfo = new File(path, fileName);
+        return fileInfo.exists();
+
+    }
+
 
 }
