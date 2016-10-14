@@ -1,0 +1,7 @@
+#Thu Oct 13 11:09:16 CEST 2016
+base.0=/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a838669f680a2b9bf9678b3437a226fb1b508ec9
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ec57c9299441f3ed643e15c41ca8d5af094beb88/classes.dex
+base.1=/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ec57c9299441f3ed643e15c41ca8d5af094beb88
+file.0=/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a838669f680a2b9bf9678b3437a226fb1b508ec9/classes.dex

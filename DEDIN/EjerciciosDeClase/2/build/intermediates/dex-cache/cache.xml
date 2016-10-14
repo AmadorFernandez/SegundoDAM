@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_f11f17173e15a4e4b247b79a2f7dc695bc5ac32b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_67e7b23770fcc1396381599f382921fabef4046d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_c9010adf052594d8d9580aa36f8f5d0e76580e09/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_4be6ee3d4d7d6e46c477120f489acc8aa2d962a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_d8a6f9f79e61512a663abc4dcc7eb1af355e3b4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5de32709619c6ff60f5aba94288a8f1b51f77958">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a838669f680a2b9bf9678b3437a226fb1b508ec9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_201e923c35e9fa8da411cbeb145a4873fe21d4c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_d525fecbccf03da94ca93972844f1700ac5d13c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_cb7e6002a1132013674c53d843ad9f2254296d2e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_508f0249fbfc52f27d68e3e2a36bebdb53c207e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ed3314f7311e7a599ac5ba6653c9171a87949db7">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ec57c9299441f3ed643e15c41ca8d5af094beb88/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_43faae7e6a510ce163fe6d805b444c554ccbdb63/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_b44562969f4d6dc9f65508e6def1545896e71700/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_abe99648019911093965daf5fbe417394d217188/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_fee3fcf0be62c34c87f47ceed25d827755bcd012/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_64b07fe12a0cf6d285ffaf815d0d30a007a9ac5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/usuario/DAM/SegundoDAM/DEDIN/EjerciciosDeClase/2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_703f3b05e8780588107859e2087ddfb18a25242f/classes.dex" />
+    </item>
+
+</items>
