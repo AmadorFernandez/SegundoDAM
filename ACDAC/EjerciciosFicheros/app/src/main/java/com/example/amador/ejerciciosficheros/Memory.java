@@ -1,8 +1,6 @@
 package com.example.amador.ejerciciosficheros;
 
-import android.widget.Toast;
 
-import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -12,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -23,13 +22,23 @@ import java.util.Locale;
 
 public class Memory {
 
-    String path;
+
 
     //Const number error
-    private static final int FILE_NOT_FOUNT = 1;
-    private static final int ERROR_IO = 2;
-    private static final int CORRECT = 0;
+    public static final int CORRECT = 0;
+    public static final int FILE_NOT_FOUNT = 1;
+    public static final int ERROR_IO = 2;
+    public static final int UNSOPORTED_ENCODING = 3;
+    //Const message error
+    public static final String FILE_NOT_FOUNT_MSG = "Fichero no encontrado";
+    public static final String IO_ERROR_MSG = "Error IO";
+    public static final String UNSOPORTED_ENCODING_MSG = "Codificación no soportada";
+    public static final String CORRECT_MSG = "Tarea realizada con éxito";
 
+    //Camps
+    private String path;
+
+    //Getters and Setters
     public String getPath() {
         return path;
     }
@@ -38,11 +47,14 @@ public class Memory {
         this.path = path;
     }
 
+
+    //Construct
     public Memory(String path){
 
         this.path = path;
     }
 
+    //Instance methods
     public int writeFile(String fileName, String text){
 
         int result = 0;
@@ -166,10 +178,141 @@ public class Memory {
 
     }
 
+
+    //Class methods
     public static boolean isFileExits(String path, String fileName){
 
         File fileInfo = new File(path, fileName);
         return fileInfo.exists();
+
+    }
+
+    public static String readFile(String absolutePath){
+
+        File file;
+        String line = "";
+        StringBuilder result = null;
+        BufferedReader bf = null;
+
+
+        file = new File(absolutePath);
+        result = new StringBuilder();
+        try {
+            bf = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+
+            while ((line = bf.readLine()) != null){
+
+                result.append(line);
+                result.append("\n");
+
+            }
+
+        } catch (FileNotFoundException e) {
+            result = new StringBuilder(FILE_NOT_FOUNT_MSG);
+        } catch (IOException e) {
+            result = new StringBuilder(ERROR_IO);
+        }finally {
+
+            if(bf != null){
+
+                try {
+                    bf.close();
+                } catch (IOException e) {
+
+                }
+
+            }
+
+            return result.toString();
+        }
+
+    }
+
+    public static String readFile(String absolutePath, String encoding){
+
+        File file;
+        String line = "";
+        StringBuilder result = null;
+        BufferedReader bf = null;
+
+
+        file = new File(absolutePath);
+        result = new StringBuilder();
+        try {
+            bf = new BufferedReader(new InputStreamReader(new FileInputStream(file), encoding));
+
+            while ((line = bf.readLine()) != null){
+
+                result.append(line);
+                result.append("\n");
+
+            }
+
+        } catch (FileNotFoundException e) {
+            result = new StringBuilder(FILE_NOT_FOUNT_MSG);
+        } catch (IOException e) {
+            result = new StringBuilder(ERROR_IO);
+        }finally {
+
+            if(bf != null){
+
+                try {
+                    bf.close();
+                } catch (IOException e) {
+
+                }
+
+            }
+
+            return result.toString();
+        }
+
+    }
+
+    public static int copyInFile(String absolutePathOrigin, String absolutePathDestiny, String encoding){
+
+        File fileOrigin = new File(absolutePathOrigin);
+        File fileDestiny = new File(absolutePathDestiny);
+        BufferedReader br = null;
+        BufferedWriter bw = null;
+        String line = "";
+        int result = 0;
+
+        try {
+
+            br = new BufferedReader(new InputStreamReader(new FileInputStream(fileOrigin), encoding));
+            bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileDestiny), encoding));
+
+            while ((line = br.readLine()) != null){
+
+                bw.write(line);
+                bw.newLine();
+            }
+
+        } catch (FileNotFoundException e) {
+
+            result = FILE_NOT_FOUNT;
+
+        } catch (UnsupportedEncodingException e) {
+
+            result = UNSOPORTED_ENCODING;
+
+        } catch (IOException e) {
+
+            result = ERROR_IO;
+
+        }finally {
+
+            try {
+                br.close();
+                bw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return result;
+        }
+
 
     }
 

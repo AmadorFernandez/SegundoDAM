@@ -11,4 +11,5 @@
     <string name="utf8">UTF-8</string>
     <string name="utf16">UTF-16</string>
     <string name="ISO">ISO-8859-15</string>
+    <string name="no_select_file">No se escogió ningún archivo</string>
 </resources>

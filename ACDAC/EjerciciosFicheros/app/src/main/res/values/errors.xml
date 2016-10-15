@@ -6,5 +6,6 @@
     <string name="io_error">Error en la escritura del archivo</string>
     <string name="not_media_mount">No hay una SD disponible</string>
     <string name="not_search_file_press">Introduzca un valor para guardar</string>
+    <string name="no_aplication_explorer_file">No hay una aplicación para manejar ficheros</string>
 
 </resources>
