@@ -1,0 +1,94 @@
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+public class Principal {
+	
+	public static volatile int contador = 0;
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		Operadorcete operadorcete = new Operadorcete();
+	  
+		MyThread thread1 = new MyThread(operadorcete, 1);
+		MyThread thread2 = new MyThread(operadorcete, 2);
+		
+		thread1.start();
+		thread2.start();
+		thread1.join();
+		thread2.join();
+		
+		System.out.println("El contador vale: "+contador);
+		
+		
+
+	}
+	
+	
+
+}
+
+class Operadorcete extends Thread{
+	 
+	public  void sumar(){
+		
+		
+		for (int i = 0; i < 1000; i++) {
+		
+		Principal.contador++;
+							
+	
+			}
+}
+	
+	public  void restar(){
+		
+		
+		for (int i = 0; i < 500; i++) {
+		
+			Principal.contador--;
+							
+	
+			}
+}
+	
+	
+	
+}
+
+class MyThread extends Thread {
+	
+	private	Operadorcete operadorcete;
+	private int tipoOperacion;
+	
+	
+	public MyThread(Operadorcete operadorcete, int tipoOperacion){
+		
+		this.operadorcete = operadorcete;
+		this.tipoOperacion = tipoOperacion;
+	}
+	
+	
+	public void run() {
+				
+           
+		switch (this.tipoOperacion) {
+		
+			case 1:
+				this.operadorcete.sumar();
+			break;
+			case 2:
+				this.operadorcete.restar();
+				break;
+
+			
+		}                      
+				
+	}
+    
+    
+	
+    
+}

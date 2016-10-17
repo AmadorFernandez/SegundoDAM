@@ -1,0 +1,69 @@
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
+public class Principal {
+	
+	public static volatile int contador = 0;
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		Sumador sumador = new Sumador();
+		Sumador sumador2 = new Sumador();
+		
+		
+	    sumador.start();
+	    sumador2.start();
+	    sumador1.join();
+	    sumador2.join();
+	  
+	
+		
+		System.out.println("El contador vale: "+contador);
+		
+		
+
+	}
+
+}
+
+class Operadorcete extends Thread{
+	 
+	
+	
+	
+	
+}
+
+class Sumador extends Thread {
+	
+
+	
+	
+	public void run() {
+		
+		ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
+		Lock bLock = lock.writeLock();
+		
+		bLock.lock();
+           		
+			for (int i = 0; i < 1000; i++) {
+				
+				Principal.contador++;
+							
+		}
+			
+			bLock.unlock();
+			
+			
+			
+                       
+				
+	}
+    
+    
+	
+    
+}
