@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="border_header">#5566CC</color>
+    <color name="backGround_header">#88FFAA</color>
+    <color name="color_star_backgroud">#9966FF</color>
+    <color name="color_end_background">#882211</color>
+    <color name="border_body">#88CC55</color>
+    <color name="backGround_body">#3399AA</color>
 </resources>

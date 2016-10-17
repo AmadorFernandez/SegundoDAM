@@ -45,6 +45,7 @@ public class EjD extends AppCompatActivity {
         tiFileNameOrigin = (TextInputLayout)findViewById(R.id.inputLayoudD1);
         tiFileNameDestiny = (TextInputLayout)findViewById(R.id.inputLayoudD2);
         selectionEncoding = UTF_8;
+        edtPathFileOrigin.setText("operaciones.txt");
 
 
         btnOpenExplorerFiles.setOnClickListener(new View.OnClickListener() {

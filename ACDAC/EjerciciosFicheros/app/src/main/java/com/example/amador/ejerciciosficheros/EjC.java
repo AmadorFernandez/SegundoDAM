@@ -73,13 +73,13 @@ public class EjC extends AppCompatActivity {
 
         }
 
-        if(Memory.isFileExits(Environment.getExternalStorageDirectory().getPath(), FILE_NAME)){
+        if(isFileExits(Environment.getExternalStorageDirectory().getPath())){
 
-            memoryFiles = new Memory(Environment.getExternalStorageDirectory().getPath());
-            memoryFiles.readInFile(FILE_NAME, edtTwo.getText().toString());
+
+            edtTwo.setText(readInFile(Environment.getExternalStorageDirectory().getPath()));
             edtTwo.setEnabled(false);
             btnAddExternalFile.setVisibility(View.INVISIBLE);
-            txvExternal.setText(Environment.getExternalStorageDirectory().getPath() + FILE_NAME);
+            txvExternal.setText(Environment.getExternalStorageDirectory().getPath() + "/"+ FILE_NAME);
 
         }else{
 
@@ -125,7 +125,7 @@ public class EjC extends AppCompatActivity {
                     writeInFile(String.valueOf(edtOne.getText()), getFilesDir().getPath());
                     btnAddInternalFile.setVisibility(View.INVISIBLE);
                     edtOne.setEnabled(false);
-                    txvInternal.setText(getFilesDir().getPath() + FILE_NAME);
+                    txvInternal.setText(getFilesDir().getPath() + "/" + FILE_NAME);
                 }else {
 
                     edtOne.setText("");
