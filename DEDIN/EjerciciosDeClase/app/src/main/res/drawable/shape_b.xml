@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval"
+    android:shape="rectangle"
     >
 
+
     <gradient
-        android:startColor="#25E462"
-        android:centerColor="#663A22"
-        android:endColor="#99ACBC"
+        android:startColor="#d9b73c"
+        android:centerColor="#f4170b"
+        android:endColor="#6c306c"
         android:angle="360"
-        android:type="linear"
+        android:gradientRadius="45dp"
+        android:type="radial"
         />
-
     <corners android:radius="4dp"/>
-
-
-
-
-
 
 
 </shape>

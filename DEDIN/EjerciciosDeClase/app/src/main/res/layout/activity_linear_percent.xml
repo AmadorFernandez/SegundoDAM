@@ -30,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:background="@drawable/shape_b"
         />
 
     <Button
@@ -37,7 +38,9 @@
         android:text="@string/text_c"
         android:id="@+id/btnC"
         android:layout_width="wrap_content"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:background="@drawable/shape_c"
+        />
 
 
 </LinearLayout>
