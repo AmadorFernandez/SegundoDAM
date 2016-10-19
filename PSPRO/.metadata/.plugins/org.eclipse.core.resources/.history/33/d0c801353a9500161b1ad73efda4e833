@@ -183,9 +183,13 @@ class FiboNene1 implements Runnable{
 	@Override
 	public void run() {
 		
-					
-		 FiboPapi.sucesion[n] = FiboPapi.sucesion[n - 1];
-						       	
+		synchronized (FiboPapi.sucesion) {
+			
+			 FiboPapi.sucesion[n] = FiboPapi.sucesion[n - 1];
+		}
+       
+         
+				       	
 	}
 	
 }
@@ -217,9 +221,12 @@ class FiboNene2 implements Runnable{
 	@Override
 	public void run() {
 		    
-					
-	   FiboPapi.sucesion[n] += FiboPapi.sucesion[n - 2];
-		      			       	
+		synchronized (FiboPapi.sucesion) {
+			
+			FiboPapi.sucesion[n] += FiboPapi.sucesion[n - 2];
+		}
+    	  
+       			       	
 	}
 	
 }

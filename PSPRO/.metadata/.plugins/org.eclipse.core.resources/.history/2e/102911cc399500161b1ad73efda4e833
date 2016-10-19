@@ -85,10 +85,9 @@ public class FiboPapi {
 			operador1 = new FiboNene1(i);
 			operador2 = new FiboNene2(i);
 			operador1.start();
-			
+			operador2.start();
 			try {
 				operador1.join();
-				operador2.start();
 				operador2.join();
 			} catch (InterruptedException e) {
 				
@@ -183,9 +182,13 @@ class FiboNene1 implements Runnable{
 	@Override
 	public void run() {
 		
-					
-		 FiboPapi.sucesion[n] = FiboPapi.sucesion[n - 1];
-						       	
+		synchronized (FiboPapi.sucesion) {
+			
+			 FiboPapi.sucesion[n] = FiboPapi.sucesion[n - 1];
+		}
+       
+         
+				       	
 	}
 	
 }
@@ -217,9 +220,12 @@ class FiboNene2 implements Runnable{
 	@Override
 	public void run() {
 		    
-					
-	   FiboPapi.sucesion[n] += FiboPapi.sucesion[n - 2];
-		      			       	
+		synchronized (FiboPapi.sucesion) {
+			
+			FiboPapi.sucesion[n] += FiboPapi.sucesion[n - 2];
+		}
+    	  
+       			       	
 	}
 	
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gestion de productos</string>
+    <string name="btn_login">Conectar</string>
+    <string name="cb_text">Recordar credenciales</string>
+    <string name="data_empty">El campo no puede estar vacio</string>
+    <string name="hint_pass">Contraseña</string>
+    <string name="hint_user">Usuario</string>
+    <string name="login_ok">Conexión correcta</string>
+    <string name="passCase">La contraseña debe contener al menos una mayúscula</string>
+    <string name="passDigit">La contraseña debe contener al menos un número</string>
+    <string name="passMinLength">La contraseña no puede ser menos a 8 caracteres</string>
+</resources>
