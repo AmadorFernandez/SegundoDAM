@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;file_test.txt&apos; to &apos;VocalCount&apos;" description="Move &apos;file_test.txt&apos; to &apos;VocalCount&apos;" destination="/VocalCount" element1="src/com/pspro/file_test.txt" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1476912814288" updateReferences="true"/>
+</session>

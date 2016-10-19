@@ -1,0 +1,36 @@
+package com.pspro;
+
+import java.io.File;
+
+import javax.print.DocFlavor.STRING;
+
+public class FirstClass {
+	
+	public static volatile int totalVocal = 0;
+	private static String pathApplication;
+	public final static String FILE_NAME = "file_test.txt";
+
+	public static void main(String[] args) {
+		
+		extractApplicationPath();
+		startUI();
+		
+
+	}
+	
+private static void startUI() {
+		
+		FileIO fIo = new FileIO(pathApplication, FILE_NAME);
+		
+		System.out.println(fIo.readFile());
+		
+	}
+	
+	private static void extractApplicationPath(){
+		
+		File file = new File(".");
+		pathApplication = file.getAbsolutePath();
+		
+	}
+
+}
