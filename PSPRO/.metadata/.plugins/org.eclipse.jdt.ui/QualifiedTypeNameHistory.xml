@@ -9,8 +9,6 @@
 <fullyQualifiedTypeName name="RunThread"/>
 <fullyQualifiedTypeName name="CalFibonaci"/>
 <fullyQualifiedTypeName name="javax.swing.text.Position"/>
-<fullyQualifiedTypeName name="java.lang.Override"/>
-<fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="Restador"/>
 <fullyQualifiedTypeName name="Sumador"/>
 <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantLock"/>
@@ -26,7 +24,6 @@
 <fullyQualifiedTypeName name="javax.print.DocFlavor.STRING"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="com.pspro.FileIO"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -40,4 +37,7 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.util.concurrent.Semaphore"/>
 <fullyQualifiedTypeName name="com.pspro.CountVocal"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

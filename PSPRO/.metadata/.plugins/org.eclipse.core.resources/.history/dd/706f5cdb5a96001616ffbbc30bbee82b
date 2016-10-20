@@ -24,12 +24,12 @@ public class CountVocal implements Runnable{
 		
 	}
 	
-	public void start() {
+	private void start() {
 		
 		this.thread.start();
 	}
 	
-	public void join() throws InterruptedException{
+	private void join() throws InterruptedException{
 		
 		this.thread.join();
 	}
