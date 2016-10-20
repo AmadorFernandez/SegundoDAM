@@ -8,7 +8,7 @@ import javax.print.DocFlavor.STRING;
 public class FirstClass {
 	
 	public static volatile int totalVocal = 0;
-	public static volatile int[] countVocals = new int[5];
+	public static int[] countVocals = new int[5];
 	private static String pathApplication = "";
 	public final static String FILE_NAME = "file_test.txt";
 	private static char[][] vocals = new char[5][4];

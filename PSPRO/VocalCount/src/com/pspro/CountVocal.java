@@ -5,10 +5,10 @@ package com.pspro;
 public class CountVocal implements Runnable{
 	
 	private volatile char[] vocals;
-	private volatile int count;
-	private volatile String text;
-	private volatile String bolt;
-	private volatile int indexVocalAssigned;
+	private int count;
+	private int indexVocalAssigned;
+	private String text;
+	private String bolt;	
 	private Thread thread;
 	
 	 
@@ -36,14 +36,8 @@ public class CountVocal implements Runnable{
 	
 	private void sumVocal(){
 		
-		synchronized (bolt) {
-			
-			FirstClass.totalVocal++;
-		}
-				
-		
-		
-				
+    	FirstClass.totalVocal++;
+					
 	}
 	
 	@Override

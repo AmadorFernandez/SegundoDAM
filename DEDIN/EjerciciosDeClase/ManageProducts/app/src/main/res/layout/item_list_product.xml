@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/width_imv_product"
+        android:layout_height="@dimen/height_imv_product"
+        android:src="@drawable/pill"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="@dimen/img_margin_top_product"
+        android:layout_marginLeft="@dimen/img_margin_left_product"
+        android:id="@+id/imvProduct"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textProductName"
+        android:layout_toRightOf="@+id/imvProduct"
+        android:layout_marginLeft="@dimen/widget_margin_left"
+        android:layout_marginTop="@dimen/widget_margin_top"
+        />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txvDosagePro"
+        android:layout_below="@id/textProductName"
+        android:layout_toRightOf="@+id/imvProduct"
+        android:layout_marginLeft="@dimen/widget_margin_left"
+        />
+
+
+
+
+</RelativeLayout>

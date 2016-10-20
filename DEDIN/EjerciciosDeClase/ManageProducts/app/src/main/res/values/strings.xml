@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ManageProducts</string>
+    <string name="txtLoginUser">User:</string>
+    <string name="txtLoginPassword">Password:</string>
+    <string name="chbLoginRemember">Remember</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnLoginCancel">Cancel</string>
+    <string name="hintUser">Introduce an user</string>
+    <string name="hintPass">Introduce a password</string>
+    <string name="savedUser">Saved</string>
+    <string name="contentdescription">contentDescription</string>
+</resources>
