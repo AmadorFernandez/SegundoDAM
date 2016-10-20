@@ -1,0 +1,7 @@
+#Wed Oct 19 22:38:18 CEST 2016
+base.0=/home/amador/DAM/DEDIN/ManageProducts/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_661cfd527152ded3712f3ca381febb3fd5819c0b
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/amador/DAM/DEDIN/ManageProducts/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8633e2f7e9cb4627b8caa23a9f717342c92a7fd1/classes.dex
+base.1=/home/amador/DAM/DEDIN/ManageProducts/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8633e2f7e9cb4627b8caa23a9f717342c92a7fd1
+file.0=/home/amador/DAM/DEDIN/ManageProducts/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_661cfd527152ded3712f3ca381febb3fd5819c0b/classes.dex

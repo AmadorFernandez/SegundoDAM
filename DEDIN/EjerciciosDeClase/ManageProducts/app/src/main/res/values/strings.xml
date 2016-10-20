@@ -9,4 +9,11 @@
     <string name="hintPass">Introduce a password</string>
     <string name="savedUser">Saved</string>
     <string name="contentdescription">contentDescription</string>
+    <string name="text_in_name_product">Introduce a name</string>
+    <string name="text_in_brand_product">Introduce a brand</string>
+    <string name="text_in_descrription_product">Introduce a description</string>
+    <string name="text_in_dosage_product">Introduce a dosage</string>
+    <string name="text_in_sale_product">Introduce a sale</string>
+    <string name="text_in_stock_product">Stock</string>
+    <string name="text_in_description_product">Description</string>
 </resources>
