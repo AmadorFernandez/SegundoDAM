@@ -1,0 +1,47 @@
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Timer;
+
+public class Caja {
+
+	private Queue<Cliente> cola;
+	private Timer crono;
+	
+	
+	public Queue<Cliente> getCola(){
+		
+		return this.cola;
+	}
+	
+	public Caja(){
+
+		this.cola = new LinkedList<Cliente>();
+				
+	}
+	
+	public void atenderClientes(){
+		
+		Cliente cliente;
+		long timeEntrada;
+		long timeSalida;
+		
+		if(this.cola.size() > 0){
+			
+			timeEntrada = System.currentTimeMillis();
+			cliente = this.cola.poll();
+			cliente.setAtendido(true);
+			synchronized (this) {
+				notifyAll();
+			}
+			Supermercado.gastoClientes += cliente.getGastado();
+			Supermercado.clientes.remove(cliente);
+			timeSalida = System.currentTimeMillis();			
+			Supermercado.tiempoDeAtencion += (timeSalida - timeEntrada);
+			System.out.println("Cliente atendido y me he gastado "+cliente.getGastado()+" "+cliente.getIdCliente());
+			
+		}
+	}
+	
+	
+}

@@ -5,4 +5,11 @@
     <dimen name="logo_splash">70dp</dimen>
     <dimen name="menu_button_top_separation">10dp</dimen>
     <dimen name="btn_delete_dimen">50dp</dimen>
+    <dimen name="text_chronometer_size">30dp</dimen>
+    <dimen name="chrometer_margin_top">20dp</dimen>
+    <dimen name="reset_margin_top">20px</dimen>
+    <dimen name="text_dimen_mestruap">25dp</dimen>
+    <dimen name="dimen_color_mestruapp">15dp</dimen>
+    <dimen name="top_menstruapp">10dp</dimen>
+    <dimen name="margin_color">5dp</dimen>
 </resources>

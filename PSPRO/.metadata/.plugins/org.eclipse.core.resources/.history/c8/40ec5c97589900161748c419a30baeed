@@ -1,0 +1,33 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Caja extends Thread {
+
+	private Queue<Cliente> cola;
+	private int nCaja;
+	private Cuenta cuenta;
+	
+	public Queue<Cliente> getCola(){
+		
+		return this.cola;
+	}
+	
+	public Caja(Cuenta c, int nCaja){
+		
+		this.cuenta = c;
+		this.nCaja = nCaja;
+		this.cola = new LinkedList<Cliente>();
+		
+	}
+	
+	public void ingresar(double catidad){
+		
+		synchronized(this.cuenta){
+			
+			cuenta.sumValor(catidad);
+		}
+	}
+	
+	
+	
+}

@@ -1,6 +1,7 @@
 package com.amador.relacionficheros;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 /**
  * Created by amador on 20/10/16.
@@ -8,7 +9,7 @@ import java.io.Serializable;
 
 public class Friend implements Serializable {
 
-    private int id;
+    private String id;
     private String name;
     private String telephono;
     private String email;
@@ -38,20 +39,18 @@ public class Friend implements Serializable {
         this.name = name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public Friend(String name, String telephono, String email, int id) {
+
+    public Friend(String name, String telephono, String email) {
 
         this.name = name;
         this.telephono = telephono;
         this.email = email;
-        this.id = id;
+        this.id = UUID.randomUUID().toString();
 
     }
 
@@ -78,8 +77,6 @@ public class Friend implements Serializable {
 
     }
 
-    @Override
-    public int hashCode() {
-        return id;
-    }
+
+
 }

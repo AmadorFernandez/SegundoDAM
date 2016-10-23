@@ -1,0 +1,112 @@
+
+
+class Baton {
+	
+	private volatile boolean haveBaton = true;
+	
+	public boolean batonState(){
+		
+		return this.haveBaton;
+	}
+	
+	public void chageBatonState(boolean state){
+		
+		this.haveBaton = state;
+	}
+	
+}
+
+public class Relay {
+	
+	private static Runner[] runners = new Runner[4];
+    
+    public static boolean endRace = false;
+
+	public static void main(String[] args) {
+		
+		Baton baton = new Baton();
+		
+		for (int i = 0; i < runners.length; i++) {
+			
+			runners[i] = new Runner(baton, i+1);
+			runners[i].start();
+		}
+		
+		try{
+			for (int i = 0; i < runners.length; i++) {
+					runners[i].join();
+				
+				}
+		
+		Thread.sleep(500);
+		System.out.println("End of race");
+		
+		}catch (InterruptedException e) {
+			
+			
+		}
+	}
+}
+
+
+
+class Runner extends Thread{
+	
+	private Baton baton;
+	private int number;
+	
+	public Runner(Baton b, int numberRunner){
+		
+		this.baton = b;	
+		this.number = numberRunner;
+	}
+	
+	public void runnig(){
+		
+		synchronized (this.baton) {
+			
+			this.baton.chageBatonState(false);			
+		}
+		
+	}
+	
+	public void endturn(){
+		
+		synchronized (this.baton) {
+			
+			this.baton.chageBatonState(true);
+		}
+	}
+	
+	public boolean botonState(){
+		
+		synchronized (this.baton) {
+			
+		    return this.baton.batonState();
+			
+		}
+	}
+	
+	public void run(){
+		
+		try{
+			
+			
+			
+				while (!botonState()) {
+					Thread.sleep(100);
+				}
+				runnig();
+				System.out.println("[Runner "+this.number+"]"+"End of my time");
+				Thread.sleep(2000);				
+				endturn();				
+					
+		}catch(IllegalArgumentException | InterruptedException e){
+			
+			//????
+		}
+		
+	}
+	
+	
+}

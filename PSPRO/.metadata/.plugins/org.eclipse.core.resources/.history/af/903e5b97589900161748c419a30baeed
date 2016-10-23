@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+class Cuenta{
+	
+	private double valor = 0;
+	
+	public double getValor(){
+		
+		return valor;
+	}
+	
+	public void sumValor(double v){
+		
+		this.valor += v;
+	}
+	
+}
+
+public class Supermercado {
+
+	
+	
+	public static Cuenta cuantaFinal = new Cuenta();
+	public static Caja[] cajas;
+	public static ArrayList<Cliente> clientes;
+	public int nClientes;
+	
+	public static void main(String[] srgs){
+		
+		
+		
+	}
+	
+}

@@ -3,13 +3,11 @@ package com.amador.relacionficheros;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by amador on 20/10/16.
- */
 
+//Clase Singleton para guardar los amigos
 public class Diary extends ArrayList<Friend> {
 
-    static Diary diary;
+    private static Diary diary;
 
     public static Diary getDiary(){
 
@@ -21,5 +19,8 @@ public class Diary extends ArrayList<Friend> {
         return diary;
     }
 
-    private Diary(){}
+    private Diary(){
+
+
+    }
 }

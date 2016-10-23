@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicLong;
+
+class Supermercado{
+	
+	public static Double valor = 0.0;	
+	public static Caja[] cajas;
+	public static ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+	public static long tiempoDeAtencion = 0;
+	public static double gastoClientes = 0;
+	
+	
+	public double getValor(){
+		
+		return valor;
+	}
+	
+	public static void sumValor(double v){
+		
+	  synchronized (valor) {
+		  valor += v;
+	  }	
+		
+	}
+	
+}

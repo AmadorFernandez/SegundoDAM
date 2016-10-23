@@ -1,0 +1,96 @@
+import java.util.Random;
+
+public class Cliente extends Thread  {
+
+	private int id;
+	private Random alea;
+	private boolean atendido;
+	
+	
+	public void setId(int value){
+		
+		this.id = value;
+	}
+	
+	public int getId(){
+		
+		return this.id;
+	}
+	
+	public void setAtendido(boolean value){
+		
+		this.atendido = value;
+		if(isAtendido()){
+			
+			notify();
+		}
+	}
+	
+	
+	
+	public boolean isAtendido(){
+		
+		return atendido;
+	}
+	
+	
+	
+	public Cliente(int id){
+		
+		
+		this.alea = new Random();
+		this.atendido = false;
+		this.id = id;
+	}
+	
+	private void comprar() {
+		
+		try {
+			Thread.sleep(alea.nextInt(5000));
+		} catch (InterruptedException e) {
+			//???
+		}
+	}
+	
+	public double pagar(){
+		
+		
+		return alea.nextDouble();
+	}
+	
+	public void enColar(){
+		
+		int caja = alea.nextInt(Supermercado.cajas.length);
+		Supermercado.cajas[caja].getCola().add(this);
+		
+	}
+	
+	public void run(){
+		
+		comprar();
+		enColar();
+		
+		if(!isAtendido()){
+			
+			interrupt();
+		}
+								
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		
+	     boolean resultado = false;
+	     
+	     if(obj != null){
+	    	 
+	    	 if(obj instanceof Cliente){
+	    		 
+	    		 resultado = ((Cliente)obj).getId() == this.id;
+	    	 }
+	     }
+	     
+	     return resultado;
+	}
+		
+}

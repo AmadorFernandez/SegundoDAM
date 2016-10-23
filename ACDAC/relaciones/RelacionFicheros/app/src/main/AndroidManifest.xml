@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.amador.relacionficheros">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -21,7 +24,14 @@
             android:name=".SelectionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name=".EJOne"></activity>
+        <activity android:name=".EJOne" />
+        <activity android:name=".SaveFriendActivity" />
+        <activity
+            android:name=".EJTwo"
+            android:screenOrientation="portrait" />
+        <activity android:name=".EjTree"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

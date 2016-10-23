@@ -29,8 +29,8 @@
         android:layout_width="@dimen/btn_delete_dimen"
         android:layout_height="@dimen/btn_delete_dimen"
         android:id="@+id/btnDeleteFriend"
-        android:src="@mipmap/ic_delete"
-        android:background="@color/colorIcons"
+        android:src="@mipmap/ic_borrar"
+        android:background="@color/colorDivider"
         android:layout_alignParentRight="true"
         />
 

@@ -1,0 +1,214 @@
+import java.io.WriteAbortedException;
+import java.nio.Buffer;
+import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthTextAreaUI;
+
+class Monitor{
+	
+		
+	public void in(int pos){
+					
+			Check.buffer[pos]++;	
+	}
+		
+	public int read(int pos){
+		
+		return Check.buffer[pos];
+	
+	}
+	
+}
+
+public class Check {
+	
+	public static volatile int[] buffer = new int[99999999];
+	public static volatile boolean useMonitor = false;
+	private static MyThread[] threads = new MyThread[2];
+
+	public static void main(String[] args) {
+		
+
+		instanceObjets();
+		starUI();
+		
+	}
+
+	private static void starUI() {
+		
+		final int READ = 2;
+		final int WRITE = 1;
+		boolean exit = false;
+		Scanner scanner = new Scanner(System.in);
+		String op;
+		Monitor monitor = new Monitor();
+		
+		while (!exit) {
+			
+			System.out.println("W -> read / write monitor");
+			System.out.println("S -> read / write without monitor");
+			System.out.println("E -> exit");
+			op = scanner.nextLine();
+			
+			switch (op) {
+			
+				case "W":
+				case "w":
+					useMonitor = true;
+					threads[0] = new MyThread(monitor, WRITE);
+					threads[1] = new MyThread(monitor, READ);
+					threads[0].start();
+					threads[1].start();
+					break;
+					
+				case "S":
+				case "s":
+					useMonitor = false;
+					threads[0] = new MyThread(monitor, WRITE);
+					threads[1] = new MyThread(monitor, READ);
+					threads[0].start();
+					threads[1].start();
+					break;
+				case "E":
+				case "e":
+					exit = true;
+					break;
+				default:
+					System.out.println("Option not covered by the system");
+					System.out.println();
+					break;
+			}
+		}
+		
+	}
+
+	private static void instanceObjets() {
+		
+			for (int i = 0; i < buffer.length; i++) {
+				
+				buffer[i] = 0;
+			}
+				
+	}
+
+}
+
+class MyThread extends Thread{
+	
+	private Monitor monitor;
+	private int function;
+	
+	public MyThread(Monitor m, int function){
+		
+		this.monitor = m;
+		this.function = function;
+	}
+	
+	public void run(){
+		
+		switch (this.function) {
+			
+			case 1: //Write
+				write();	
+				break;
+			case 2: //Read
+				read();
+				break;
+				
+		}
+			
+	}
+
+	private void read() {
+		
+		int nfail = 0;
+		int current;
+		int later;
+		
+		if(Check.useMonitor){
+			
+			synchronized(this.monitor){
+				
+				for (int i = 0; i < Check.buffer.length - 1; i++) {
+					
+					current = this.monitor.read(i);
+				    later = this.monitor.read(0);				
+				
+				if(current != later){
+				
+					nfail++;
+				}	
+			
+				}
+			}
+			
+						
+			System.out.println();
+			
+			if(nfail > 0){
+		
+				System.out.println("It has been produced "+nfail+" differences in reading");
+		
+			}else{
+		
+				System.out.println("All readings were equal");
+			}
+			
+		}else{
+			
+				for (int i = 0; i < Check.buffer.length - 1; i++) {
+				
+					current = Check.buffer[i];
+				    later = Check.buffer[0];
+					
+					if(current != later){
+					
+						nfail++;
+					}	
+				
+			//	System.out.print(current+", ");
+		}
+		
+				System.out.println();
+		
+				if(nfail > 0){
+			
+					System.out.println("It has been produced "+nfail+" differences in reading");
+			
+				}else{
+			
+					System.out.println("All readings were equal");
+				}
+		}
+		
+	}
+
+	private void write() {
+		
+				
+		if(Check.useMonitor){
+			
+			synchronized (this.monitor) {
+				
+				for (int i = 0; i < Check.buffer.length; i++) {
+				
+					
+					this.monitor.in(i);
+								
+				}
+			}
+																					
+			
+		}else{
+			
+			for (int i = 0; i < Check.buffer.length; i++) {
+				
+				Check.buffer[i]++;
+				
+			}
+		}
+		
+	}
+	
+}
+

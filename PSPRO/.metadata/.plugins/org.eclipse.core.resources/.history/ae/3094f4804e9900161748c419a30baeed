@@ -1,0 +1,70 @@
+import java.util.Random;
+
+public class Cliente extends Thread  {
+
+	private Random alea;
+	private String nombre;
+	private boolean atendido;
+	
+	
+	public void setAtendido(boolean value){
+		
+		this.atendido = value;
+		if(isAtendido()){
+			
+			notify();
+		}
+	}
+	
+	
+	
+	public boolean isAtendido(){
+		
+		return atendido;
+	}
+	
+	public String getNombre(){
+		
+		return nombre;
+		
+	}
+	
+	public Cliente(String nombre){
+		
+		this.nombre = nombre;
+		this.alea = new Random();
+		this.atendido = false;
+	}
+	
+	private void comprar() {
+		
+		try {
+			Thread.sleep(alea.nextInt(5000));
+		} catch (InterruptedException e) {
+			//???
+		}
+	}
+	
+	private double pagar(){
+		
+		return alea.nextDouble();
+	}
+	
+	public void enColar(){
+		
+		int caja = alea.nextInt(Supermercado.cajas.length);
+		
+	}
+	
+	public void run(){
+		
+		comprar();
+		
+		if(!isAtendido()){
+			
+			interrupt();
+		}
+								
+	}
+		
+}

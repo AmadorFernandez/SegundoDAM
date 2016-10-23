@@ -8,5 +8,25 @@
     <string name="text_exercice_six">Ejercicio 6</string>
     <string name="text_exercice_seven">Ejercicio 7</string>
     <string name="text_exercice_eight">Ejercicio 8</string>
-    <string name="text_name_friend" />
+    <string name="text_name_friend">Nombre</string>
+    <string name="text_telephone_friend">Teléfono</string>
+    <string name="text_email_friend">Email</string>
+    <string name="text_empty">El campo no puede ser vacio</string>
+    <string name="revise_text">Revise este campo</string>
+    <string name="no_email">El formato de email no es valido</string>
+    <string name="text_alert">Aviso</string>
+    <string name="text_ms_delete_dic">¿Esta seguro de que quiere borrar ese amigo?</string>
+    <string name="text_acept">Aceptar</string>
+    <string name="text_cancel">Cancelar</string>
+    <string name="text_state_alarm">Tiempo hasta que suene la próxima alarma</string>
+    <string name="text_reinice">Reiniciar todas las alarmas</string>
+    <string name="not_have_sd">No hay una targeta SD</string>
+    <string name="text_new_data_mestruap">Calcular</string>
+    <string name="day_fertil">Día fertil</string>
+    <string name="day_last_mest">Última menstruación</string>
+    <string name="date_superior">La fecha indicada en mayor que la actual</string>
+    <string name="daya_fertil">Días fértiles</string>
+    <string name="text_last_menstruapp">Fecha del último periodo</string>
+    <string name="text_duration_media">Duración de su ciclo menstrual</string>
+    <string name="no_is_number">Ese formato tiene algo raro no?</string>
 </resources>
