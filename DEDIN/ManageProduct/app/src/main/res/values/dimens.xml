@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="widget_margin_top">36dp</dimen>
+    <dimen name="widget_margin_left">24dp</dimen>
+    <dimen name="widget_textview_with">80dp</dimen>
+    <dimen name="width_imv_product">70dp</dimen>
+    <dimen name="height_imv_product">70dp</dimen>
+    <dimen name="img_margin_left_product">10dp</dimen>
+    <dimen name="img_margin_top_product">1dp</dimen>
+    <dimen name="widget_margin_rigth">10dp</dimen>
+    <dimen name="widget_margin_bottom">5dp</dimen>
+    <dimen name="height_imv_product_register">120dp</dimen>
+    <dimen name="img_margin_top_product_dosage">15dp</dimen>
+    <dimen name="imvPill">70dp</dimen>
+</resources>

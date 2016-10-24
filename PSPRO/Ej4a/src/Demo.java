@@ -14,7 +14,7 @@ public class Demo {
 			supermercado.cajas[i] = new Caja(i+1, supermercado);
 		}
 		
-		for(int i = 0; i < 255; i++){
+		for(int i = 0; i < 25; i++){
 			
 			supermercado.clientes.add(new Cliente(i+1, supermercado));
 			supermercado.clientes.get(i).start();
@@ -33,7 +33,7 @@ public class Demo {
 	   	}
 	   
 	   
-	   System.out.println("Los clientes han gastado: "+supermercado.gastoClientes);
+	//   System.out.println("Los clientes han gastado: "+supermercado.gastoClientes);
 	   System.out.println("La recaudacion ha sido de: "+supermercado.valor);
 	   System.out.println("El tiempo de atencion ha sido de: "+supermercado.tiempoDeAtencion);
 	

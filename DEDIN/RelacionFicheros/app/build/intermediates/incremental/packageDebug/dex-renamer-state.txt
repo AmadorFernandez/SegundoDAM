@@ -1,0 +1,7 @@
+#Thu Oct 20 14:41:00 CEST 2016
+base.0=/home/usuario/DAM/SegundoDAM/DEDIN/RelacionFicheros/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5824d0d9c5696a4049b93f26b9b2c72ade168635
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/usuario/DAM/SegundoDAM/DEDIN/RelacionFicheros/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_fbe1a498c369dff54d70bc0eb7dfa59766f31a20/classes.dex
+base.1=/home/usuario/DAM/SegundoDAM/DEDIN/RelacionFicheros/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_fbe1a498c369dff54d70bc0eb7dfa59766f31a20
+file.0=/home/usuario/DAM/SegundoDAM/DEDIN/RelacionFicheros/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5824d0d9c5696a4049b93f26b9b2c72ade168635/classes.dex

@@ -1,6 +1,8 @@
 
 import java.util.Random;
 
+import javax.management.monitor.Monitor;
+
 public class Cliente extends Thread  {
 
 	private int id;
@@ -23,11 +25,8 @@ public class Cliente extends Thread  {
 	
 	
 	
-	public void setAtendido(boolean value){
-		
-		
-		this.atendido = value;
-		
+	public void setAtendido(boolean value){		
+		this.atendido = value;		
 	}
 	
 	
@@ -58,7 +57,7 @@ public class Cliente extends Thread  {
 	private void comprar() {
 		
 		try {
-			Thread.sleep(alea.nextInt(5000));
+			Thread.sleep(0);
 		} catch (InterruptedException e) {
 			//???
 		}
@@ -66,15 +65,9 @@ public class Cliente extends Thread  {
 	
 	public void pagar(){
 				
-		this.gastado =  100;
-		
-		synchronized (supermercado) {
-			
-			supermercado.sumValor(this.gastado);
-		}
-		
-		
-		
+		this.gastado =  100;			
+		supermercado.sumValor(this.gastado);
+				
 	}
 	
 	public void enColar(){
@@ -83,32 +76,16 @@ public class Cliente extends Thread  {
 		
 		synchronized (supermercado.cajas) {
 			
-			supermercado.cajas[caja].getCola().add(this);
-			System.out.println("Cliente encolado");
+			supermercado.cajas[caja].getCola().add(this);	
 		}
-		
-		
+			
 	}
 	
 	public void run(){
 		
 		comprar();
 		enColar();
-		
-		if(!atendido){
-		    try {
-		    	
-		    	synchronized(this){
-		    		wait();
-		    	}
-				
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-								
+	//	pagar();									
 	}
 	
 	@Override

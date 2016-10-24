@@ -32,15 +32,12 @@ public class Caja {
 		if(this.cola.size() > 0){
 			
 			timeEntrada = System.currentTimeMillis();
-			cliente = this.cola.poll();			
-			synchronized (this) {
-				notify();
-			}
-			supermercado.gastoClientes += cliente.getGastado();
+			cliente = this.cola.poll();
+			cliente.pagar();
 			supermercado.clientes.remove(cliente);
 			timeSalida = System.currentTimeMillis();			
 			supermercado.tiempoDeAtencion += (timeSalida - timeEntrada);
-			System.out.println("Cliente atendido y me he gastado "+cliente.getGastado()+" "+cliente.getIdCliente()+ "He sido atendido or la caja"+this.nCaja);
+		//	System.out.println("Cliente atendido y me he gastado "+cliente.getGastado()+" "+cliente.getIdCliente()+ "He sido atendido or la caja"+this.nCaja);
 			cliente.setAtendido(true);
 			
 		}

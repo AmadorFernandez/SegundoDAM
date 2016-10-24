@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_register_product"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.amador.manageproducts.view.RegisterProductActivity">
+
+    <ImageView
+        android:layout_width="@dimen/height_imv_product_register"
+        android:layout_height="@dimen/height_imv_product_register"
+        android:id="@+id/imvResgisterProduct"
+        android:src="@mipmap/ic_camera"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tinNameProduct"
+        android:layout_toRightOf="@+id/imvResgisterProduct"
+        android:layout_marginLeft="@dimen/img_margin_left_product"
+        app:errorTextAppearance="@style/error"
+        app:hintTextAppearance="@style/hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:errorEnabled="true"
+        android:layout_alignTop="@+id/imvResgisterProduct"
+
+        >
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtNameProduct"
+                android:ems="20"
+                android:hint="@string/text_in_name_product"
+
+
+                />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tinBrandProduct"
+        android:layout_toRightOf="@+id/imvResgisterProduct"
+        android:layout_marginLeft="@dimen/img_margin_left_product"
+        app:errorTextAppearance="@style/error"
+        app:hintTextAppearance="@style/hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="255"
+        android:layout_below="@+id/tinNameProduct"
+        android:layout_marginTop="@dimen/img_margin_top_product"
+
+
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtBrandProduct"
+            android:ems="20"
+            android:hint="@string/text_in_brand_product"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tinDosageProduct"
+        app:errorTextAppearance="@style/error"
+        app:hintTextAppearance="@style/hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="255"
+        android:layout_below="@+id/imvResgisterProduct"
+        android:layout_marginTop="@dimen/img_margin_top_product_dosage"
+
+        >
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtDosageProduct"
+            android:ems="20"
+            android:hint="@string/text_in_dosage_product"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+   <LinearLayout
+       android:id="@+id/linear"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/tinDosageProduct"
+       android:layout_marginTop="@dimen/img_margin_top_product"
+       android:weightSum="2"
+       android:orientation="horizontal"
+       >
+
+       <android.support.design.widget.TextInputLayout
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:id="@+id/tinSaleProduct"
+           app:errorTextAppearance="@style/error"
+           app:hintTextAppearance="@style/hint"
+           android:layout_below="@+id/tinDosageProduct"
+           android:layout_marginTop="@dimen/img_margin_top_product"
+
+           >
+
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/edtSaleProduct"
+               android:ems="20"
+               android:hint="@string/text_in_sale_product"
+               android:inputType="numberDecimal"
+
+               />
+
+       </android.support.design.widget.TextInputLayout>
+
+       <android.support.design.widget.TextInputLayout
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:id="@+id/tinStockProduct"
+           app:errorTextAppearance="@style/error"
+           app:hintTextAppearance="@style/hint"
+           android:layout_below="@+id/tinDosageProduct"
+           android:layout_marginTop="@dimen/img_margin_top_product"
+
+           >
+
+
+           <EditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/edtStockProduct"
+               android:ems="20"
+               android:hint="@string/text_in_stock_product"
+               android:inputType="numberDecimal"
+
+               />
+
+       </android.support.design.widget.TextInputLayout>
+
+
+   </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tinDescriptionProduct"
+        android:layout_marginLeft="@dimen/img_margin_left_product"
+        app:errorTextAppearance="@style/error"
+        app:hintTextAppearance="@style/hint"
+        app:counterEnabled="true"
+        app:counterMaxLength="255"
+        android:layout_below="@+id/linear"
+        android:layout_marginTop="@dimen/img_margin_top_product"
+
+        >
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtDescriptionProduct"
+            android:ems="20"
+            android:hint="@string/text_in_description_product"
+            android:lines="20"
+            android:gravity="start"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/widget_margin_rigth"
+        android:layout_marginBottom="@dimen/widget_margin_bottom"
+        android:src="@mipmap/ic_add_product"
+        android:id="@+id/floatBtnSaveProduct"
+
+
+
+
+        />
+
+
+</RelativeLayout>

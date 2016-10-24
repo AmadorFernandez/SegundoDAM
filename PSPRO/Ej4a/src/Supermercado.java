@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
-class Supermercado{
+import javax.management.monitor.Monitor;
+
+class Supermercado {
 	
 	public  double valor = 0.0;	
 	public  Caja[] cajas;
@@ -10,19 +12,15 @@ class Supermercado{
 	public  double gastoClientes = 0;
 	
 	
-	public Supermercado(){
-		
-		
-	}
-	
 	public double getValor(){
 		
 		return valor;
 	}
 	
 	public void sumValor(double v){
-				  valor += v;
-			
+		  valor += v;			
 	}
+
+	
 	
 }
