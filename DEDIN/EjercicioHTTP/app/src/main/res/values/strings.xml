@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EjercicioHTTP</string>
+    <string name="introduce_url">Introduce una URL</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_data_user_empty">The user cannot be empty</string>
+    <string name="error_data_pass_empty">The password cannot be empty</string>
+    <string name="error_password_digit">The password must contain 1 or more digit</string>
+    <string name="error_password_case">The password must contain 1 or more uppercase and lowercase characters</string>
+    <string name="error_password_length">The password have to be at least 8 characters long</string>
+    <string name="error_user_length">The user have to be at least 6 characters long</string>
+    <string name="error_long_user">The user is too long</string>
+    <string name="error_long_pass">The password is too long</string>
+</resources>

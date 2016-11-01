@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    api-level="21"
+    density="xxxhdpi"
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="22975944938800"
+    token="2039318802607110084"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="0" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="0" />
+    <task
+        name="verifier"
+        duration="0" />
+
+    <artifact
+        location="/home/usuario/DAM/SegundoDAM/DEDIN/RelacionFicheros/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build
+        timestamp="22975944938800"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/usuario/DAM/SegundoDAM/DEDIN/RelacionFicheros/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
