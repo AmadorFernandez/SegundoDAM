@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import java.io.Serializable;
+import java.util.regex.Pattern;
 
 public class SaveFriendActivity extends AppCompatActivity {
 
@@ -36,9 +38,13 @@ public class SaveFriendActivity extends AppCompatActivity {
         tintlf = (TextInputLayout)findViewById(R.id.tinThelephoneFriend);
         tinEmail = (TextInputLayout)findViewById(R.id.tinTheEmailFriend);
 
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                String mail = edtEmailFriend.getText().toString();
 
                 //Valida el nombre
                 if(edtNameFrien.getText().toString().isEmpty()){
@@ -51,8 +57,7 @@ public class SaveFriendActivity extends AppCompatActivity {
                     tintlf.setError(getResources().getString(R.string.revise_text));
 
                     //Valida el patron del email
-                }else if(!edtEmailFriend.getText().toString().matches(
-                        "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,3})$")){
+                }else if(!Patterns.EMAIL_ADDRESS.matcher(mail).matches()){
 
                     tinEmail.setError(getResources().getString(R.string.no_email));
 

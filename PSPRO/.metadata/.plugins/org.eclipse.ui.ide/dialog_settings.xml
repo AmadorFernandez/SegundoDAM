@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ExternalProjectImportWizard">
-		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/amador/PSP_2015-2016/Evaluación 1/Programación de hilos/ParkingCamion"/>
+			<item value="/home/amador/DAM/PSPRO/relacion_hilos/Ej4"/>
+			<item value="/home/amador/PSP_2015-2016/Evaluación 1/Programación de hilos/HilosFilosofos"/>
 			<item value="/home/amador/PSP_2015-2016/Evaluación 1/RecuentoVocales"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
@@ -15,13 +18,13 @@
 		<item value="Aggregate for window 1475764224583" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
 	</section>
+	<section name="NewWizardAction">
+	</section>
 	<section name="SaveAsDialogSettings">
 		<item value="525" key="DIALOG_WIDTH"/>
-		<item value="40" key="DIALOG_Y_ORIGIN"/>
-		<item value="598" key="DIALOG_HEIGHT"/>
-		<item value="541" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Noto Sans|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-	</section>
-	<section name="NewWizardAction">
+		<item value="598" key="DIALOG_HEIGHT"/>
+		<item value="40" key="DIALOG_Y_ORIGIN"/>
+		<item value="541" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

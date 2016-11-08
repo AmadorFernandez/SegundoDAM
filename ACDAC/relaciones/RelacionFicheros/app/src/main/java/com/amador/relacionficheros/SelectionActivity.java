@@ -43,5 +43,13 @@ public class SelectionActivity extends AppCompatActivity {
                 startActivity(new Intent(SelectionActivity.this, EjTree.class));
             }
         });
+        btn4 = (Button)findViewById(R.id.btn4);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(SelectionActivity.this, EjFour.class));
+            }
+        });
     }
 }

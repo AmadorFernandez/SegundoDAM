@@ -1,0 +1,74 @@
+import java.util.Queue;
+
+public class SuperModerno {
+
+	
+	private Caja[] cajas;
+	private double resultado;
+	private static int nClientes;
+	private int clientesEnCola;
+	private int pos;
+	
+	public SuperModerno(int nCjas, int nClientes){
+		
+		this.cajas = new Caja[nCjas];
+		SuperModerno.nClientes = nClientes;
+		
+		
+		for (int i = 0; i < cajas.length; i++) {
+			
+			this.cajas[i] = new Caja(i+1);
+						
+		}
+	}
+	
+	public double getResultado(){
+		
+		return this.resultado;
+	}
+	
+    //Se sincroniza todo el método ya que otro hilo podría que este en ejecutando
+	//el metodo encolar podria obtener una lectura erronea
+	public synchronized void cobrar(double dinero, Caja caja){
+		
+		caja.setOcupada(false); //La caja que en la que estaba el cliente queda libre
+		this.resultado += dinero; //Se suma el dinero pagado por el usuario
+		System.out.println("La caja "+caja.getNCaja()+" queda libre");
+		notify(); //Le toca al siguiente
+	}
+	
+	public synchronized void encolar(Cliente cliente){
+		
+		//Llevara la cuenta de las cajas libres y servira de guarda para que el hilo pueda salir
+		//ya que al ser diferente de 0 
+		int cont = 0; 
+		
+		
+		
+			for (pos = 0; pos < cajas.length; pos++) {
+			
+				if(!cajas[pos].isOcupada()){
+					System.out.println("La caja "+cajas[pos].getNCaja()+" esta atendiendo al cliente "+cliente.getNcliente());
+					cajas[pos].setOcupada(true);
+					cliente.setCaja(cajas[pos]);
+					cont++;
+					break;
+				}
+			}
+			
+			if(cont == 0){
+				
+				try {
+					System.err.println("El cliente "+cliente.getNcliente()+" se pone a la cola");
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+				
+			 		
+		
+	}
+		
+}
