@@ -1,0 +1,46 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+	
+		//La demo tipica
+		
+		Almacen elAlmacen = new Almacen();
+		Envio envio = new Envio(elAlmacen);
+		Retirada retirada = new Retirada(elAlmacen);
+		
+		retirada.start();
+		envio.start();
+		
+		
+		try {
+			retirada.join();
+			envio.join();			
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("Hasta aquí llegamos");
+		
+		/*
+		 * Conclusion del ejercicio (Esto leeo despues de ver todo el codigo)
+		 * 
+		 * Se consiguen una media de 50 dias de funcionamiento correcto del almacen hasta que este
+		 * se queda sin stock. En ninguna de las muchas pruebas se ha dado el caso de que que el
+		 * el almacen de un error por ser superada la capacidad máxima de este, algo muy logico si
+		 * tenemos en cuenta que la aunque la cantidad de envios es de tres al dia, cada retirada
+		 * elimina entre 2000 y 2500 unidades del stock y como máximo se podrian recibir 3000 unidades
+		 * Partiendo de una cantidad inicial de 8000 unidades y un máximo de 20000 es poco probable que esto pase.
+		 * 
+		 * Por otro lado, debido a los tiempos de sleep que le damos a los hilos, se consigue que todos los dias 
+		 * halla 3 envios y una retirada. Por lo tanto, no ha sido necesario el verificar los envios que se llevaban
+		 * dentro de un dia cuando se realizaba una retirada y viceversa y de hay que tampoco se haya tenido que usar
+		 * wait, notify y notifyAll. Pero ya que estamos planteare una variante y solucion para este ejercicio:
+		 *		 * 		 * 
+		 * */
+		
+
+	}
+
+}

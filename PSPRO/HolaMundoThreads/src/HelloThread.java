@@ -1,0 +1,23 @@
+
+public class HelloThread extends Thread {
+
+	private int id;
+	
+	public HelloThread(int id){
+		
+		this.id = id;
+	}
+	
+	@Override
+	public void run() {
+		
+		try {
+			Thread.sleep(id*1000);
+			System.out.println("HOLA MUNDOOOOO!!! Soy el hilo "+id+" y heredo de Thread");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}

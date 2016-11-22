@@ -1,0 +1,23 @@
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Buffer elBuffer = new Buffer();
+		Productor productor = new Productor(elBuffer, 10);
+		Consumidor[] consumidors = new Consumidor[2];
+		
+		
+		productor.start();
+		
+		for (int i = 0; i < consumidors.length; i++) {
+			
+			consumidors[i] = new Consumidor(elBuffer);
+			consumidors[i].start();
+		}
+		
+		
+	}
+
+}

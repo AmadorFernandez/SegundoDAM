@@ -1,0 +1,72 @@
+import java.beans.FeatureDescriptor;
+
+public class Buffer {
+	
+	private String fecha;
+	private boolean fin;
+	
+	
+	public Buffer(){
+		
+		this.fecha = "";
+		this.fin = false;
+		
+	}
+	
+	public synchronized void setFin(boolean state){
+				
+		this.fin = fin;
+		notify();
+		
+	}
+	
+	public synchronized boolean getFin(){
+		
+		return this.fin;		
+	}
+	
+	public synchronized void escribir(String fecha){
+		
+		while (!this.fecha.equals("-1")) {
+			
+			try {
+				System.out.println("El productor esta esperando...");
+				wait();
+				
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		this.fecha = fecha;
+		System.err.println("El productor consigue escribir la fecha: "+fecha);
+		notify();
+		
+	}
+	
+	public synchronized void leer(){
+		
+		
+		
+		while(this.fecha == "-1" || !getFin()){
+			
+			try {
+				System.out.println("El consumidor"+Thread.currentThread().getName()+" esta esperando...");
+				wait();
+				System.out.println("Leo el String "+fecha+" El boleano esta a "+fin+" "+Thread.currentThread().getName());
+									
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		System.out.println("El consumidor "+Thread.currentThread().getName()+" consigue leer "+fecha);
+		fecha = "-1";
+		notify();
+		
+		
+	}
+
+}

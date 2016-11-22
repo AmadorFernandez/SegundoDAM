@@ -1,0 +1,34 @@
+import java.util.Random;
+
+public class Envio extends Thread {
+
+	
+	private Almacen almacen;
+	public static final int MIN_CANTIDAD = 400;
+	public static final int MAX_CANTIDAD = 1000;
+    private	Random randon;
+    
+    public Envio(Almacen elAlmacen){
+    	
+    	this.almacen = elAlmacen;
+    	this.randon = new Random();
+    }
+    
+    @Override
+    public void run(){
+    	
+    	
+    	while (!this.almacen.hayError()) {
+    		
+    		
+    		try {
+    			this.almacen.entrada(MIN_CANTIDAD + randon.nextInt(MAX_CANTIDAD - MIN_CANTIDAD));
+				sleep(800);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+	
+}}

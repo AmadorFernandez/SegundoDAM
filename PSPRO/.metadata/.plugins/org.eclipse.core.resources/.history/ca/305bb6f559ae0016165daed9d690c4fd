@@ -1,0 +1,118 @@
+import javax.sql.rowset.Joinable;
+import javax.xml.bind.ValidationEvent;
+
+class ValorGlobal{
+	
+	public static double media = 0;
+	
+	
+	public static void sumaMedia(double valor, int total){
+		
+		
+		try {
+			if(media == 0){
+				
+				media = valor/total;
+				
+			}else {
+				
+				media += valor/total;
+			}
+		} catch (ArithmeticException e) {
+			
+			System.err.println("No se puede dividir por 0");
+		}
+		
+		
+	}
+	
+}
+
+
+class CalculaMedias implements Runnable{
+
+	private Thread thread;
+	private int desde;
+	private int hasta;
+	private Double[] notas;
+	
+	public CalculaMedias(Double[] notas, int inicio, int limite) {
+		
+		this.notas = notas;
+		this.desde = inicio;
+		this.hasta = limite;
+		this.thread = new Thread(this);
+		this.thread.start();
+		
+	}
+	
+	public void join() throws InterruptedException{
+		
+		this.thread.join();
+	}
+	
+	@Override
+	public void run() {
+		
+		double mediaParcial = 0;
+		
+		for (int i = desde; i < hasta; i++) {
+			
+			mediaParcial += notas[i];
+		}
+				
+		ValorGlobal.sumaMedia(mediaParcial, notas.length);
+		System.out.println("Soy el hilo "+thread.getName()+" y mi parte suma "+mediaParcial);
+	}
+	
+}
+
+
+public class BuscaMedias {
+
+	public static void main(String[] args) {
+		
+		for (int j = 0; j < 200; j++) {
+			Double[] notas = { 5.0, 4.0, 9.0, 8.0, 10.0, 15.0, 20.0, 25.0, 30.0 };
+			CalculaMedias[] hilos = new CalculaMedias[3];
+			double mediaMain = 0;
+			hilos[0] = new CalculaMedias(notas, 0, 3);
+			hilos[1] = new CalculaMedias(notas, 3, 6);
+			hilos[2] = new CalculaMedias(notas, 6, 9);
+			for (int i = 0; i < hilos.length; i++) {
+
+				try {
+					hilos[i].join();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			for (int i = 0; i < notas.length; i++) {
+
+				mediaMain += notas[i];
+			}
+			mediaMain = mediaMain / notas.length;
+			
+			if(!String.valueOf(ValorGlobal.media).equals("14.0")){
+				
+				System.err.println("La media obtenida por los tres hilos es de " + ValorGlobal.media);
+			}
+			System.out.println("La media obtenida por los tres hilos es de " + ValorGlobal.media);
+			System.out.println("La media obtenida por el main es de " + mediaMain);
+			
+			ValorGlobal.media = 0;
+		}
+		
+		
+	}
+	
+	public static Double[] llenarNotas(int tamano){
+		
+		Double[] notas = new Double[tamano];
+		
+		return notas;
+		
+	}
+
+}

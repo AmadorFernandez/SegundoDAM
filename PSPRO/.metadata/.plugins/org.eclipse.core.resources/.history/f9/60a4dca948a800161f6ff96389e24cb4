@@ -1,0 +1,122 @@
+import javax.imageio.metadata.IIOInvalidTreeException;
+import javax.imageio.metadata.IIOMetadataFormat;
+
+public class Almacen {
+
+	//La capacidad máxima exigida en el enunciado
+	public static final int CAPACIDAD_MAXIMA = 20000;
+	//Llevará la cuenta del número de envíos que entrán en el almacen
+	private int nEnvios;
+	//Llevará la cuenta de los días transcurridos
+	private int dia;
+	//Pos la cuenta de las piezas
+	private int stock;
+	//La banderita para que los hilos no esten en un bucle infinito
+	private boolean error;
+	
+	
+	
+	
+	public Almacen(){
+		
+		this.dia = 1; //Primer dia de curro
+		this.error = false; //¿Como va ha haber errores si no hemos hecho namas que empezar?
+		this.stock = 8000; //Cantidad inicial de stock exigida
+		this.nEnvios = 0; //Acabos de abrir por dios
+		System.out.println("\nDía "+this.dia+"\n"); //Ala al curro
+	}
+	
+	/*Este método actualizar los envios recibidos, reiniciará el contador al llegar a 3 y
+	 * aumentará el contador de los días en uno. De este modo se consigue simular un nuevo
+	 * día.
+	 * 
+	 * No es necesario sincronizarlo porque la llamada a este método se hace desde el metodo
+	 * (entrada) que si lo esta. Así mismo, el metodo (salida) también lo esta y por lo tanto,
+	 * ningun hilo puede hacer uso de el, ya que al llamar a (entrada) el resto de metodos
+	 * que hacen uso de sycronized quedan bloqueados hasta que se libere el recurso compartido.
+	 * Entre esto y los tiempos dados a los sleep en los hilos, es "imposible" que pueda salir
+	 * más de un pedido al día. 	 * 
+	 *	 * 
+	 * */
+	private synchronized void actualizarLlegadas(){
+		
+		this.nEnvios++;
+		if(this.nEnvios == 3){
+			
+			this.nEnvios = 0;
+			this.dia++;
+			System.out.println("\nDía "+this.dia+"\n");
+			notify();
+		}
+	}
+	
+	/*
+	 * Es el metodo al que llaman los envios para pasarle la cantidad de piezas que han generado
+	 * se sincroniza para evitar el aceso simultaneo a la variable stock de this y para evitar que
+	 * mientras se esta incrementando el contador de envios y el de dias
+	 * */
+	public synchronized void entrada(int cantidad){
+		
+		System.out.println("Llegan "+cantidad+" piezas");
+		int preConteo = cantidad + this.stock;
+		
+		if(preConteo > CAPACIDAD_MAXIMA){
+			
+			this.error = true;
+			notifyAll();
+			System.out.println("La suma es de "+preConteo+" piezas y supera la capacidad del almacen");
+			
+		}else {
+			
+			this.stock += cantidad;
+			System.out.println("Hay "+this.stock+" piezas en el almacen");
+			actualizarLlegadas();
+			
+		}
+		
+	}
+	
+	public synchronized void salida(int nPiezas){
+		
+		while (this.nEnvios < 3) {
+			
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("Pedido de "+nPiezas+" piezas");
+		
+		if(this.stock < nPiezas){
+			
+			this.error = true;
+			notifyAll();
+			System.out.println("Hay "+this.stock+" piezas en el almacen y no se puede cubrir el pedido");
+			
+			
+		}else {
+			
+			this.stock -= nPiezas;
+			System.out.println("Hay "+this.stock+" piezas en el almacen");
+			
+		}
+		
+		
+	}
+	
+	public synchronized boolean hayError(){
+		
+		return this.error;
+	    
+	}
+	
+ 
+	
+	
+	
+	
+	
+}

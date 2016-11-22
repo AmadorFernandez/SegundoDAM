@@ -1,0 +1,26 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+	
+		Almacen elAlmacen = new Almacen();
+		Envio envio = new Envio(elAlmacen);
+		Retirada retirada = new Retirada(elAlmacen);
+		
+		envio.start();
+		retirada.start();
+		
+		try {
+			envio.join();
+			retirada.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("Hasta aquí llegamos");
+		
+
+	}
+
+}

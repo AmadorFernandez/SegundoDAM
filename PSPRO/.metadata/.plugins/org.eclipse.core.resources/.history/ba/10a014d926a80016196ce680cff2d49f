@@ -1,0 +1,11 @@
+
+public class Alamacen {
+
+	public static final int ENVIO_MAX = 1000;
+	public static final int ENVIO_MIN = 400;
+	public static final int CAPACIDAD_MAXIMA = 20000;
+	private int nPiezas;
+	
+	
+	
+}

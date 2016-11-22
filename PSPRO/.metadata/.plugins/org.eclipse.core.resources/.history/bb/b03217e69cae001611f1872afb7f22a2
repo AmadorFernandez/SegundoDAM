@@ -1,0 +1,34 @@
+
+public class Consumidor extends Thread {
+	
+	private Buffer elBuffer;
+	
+	public Consumidor(Buffer elBufer) {
+		// TODO Auto-generated constructor stub
+		
+		this.elBuffer = elBufer;
+	}
+	
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		while (!elBuffer.getFin()) {
+			
+			 elBuffer.leer();
+			try {
+				sleep(000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			
+			
+		}
+		
+		System.out.println("El consumidor "+Thread.currentThread().getName()+" termino de leer");
+	}
+	
+}

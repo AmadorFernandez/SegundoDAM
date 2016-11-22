@@ -1,0 +1,48 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class Productor extends Thread
+{
+
+	private Buffer elBuffer;
+	private int nFechas;
+	
+	public Productor(Buffer elBuffer, int nFechas){
+		
+		this.elBuffer = elBuffer;
+		this.nFechas = nFechas;
+	}
+	
+	@Override
+	public void run() {
+		
+		Calendar calendar = new GregorianCalendar();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh:mm:ss");
+		String fecha;
+		
+		for (int i = 1; i <= nFechas; i++) {
+			
+			fecha = simpleDateFormat.format(calendar.getTime());
+			elBuffer.escribir(fecha);
+			try {
+				sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			calendar = new GregorianCalendar();
+			
+		}
+		
+		synchronized (elBuffer) {
+			
+			elBuffer.setFin(true);
+			 System.err.println("El productor termino");
+		}
+		
+		
+	}
+	
+}

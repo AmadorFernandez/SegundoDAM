@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ExternalProjectImportWizard">
-		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
 			<item value="/home/amador/PSP_2015-2016/Evaluación 1/Programación de hilos/ParkingCamion"/>
 			<item value="/home/amador/DAM/PSPRO/relacion_hilos/Ej4"/>
 			<item value="/home/amador/PSP_2015-2016/Evaluación 1/Programación de hilos/HilosFilosofos"/>
 			<item value="/home/amador/PSP_2015-2016/Evaluación 1/RecuentoVocales"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/home/amador/Escritorio/Untitled.zip"/>
 			<item value=""/>
 		</list>
 	</section>

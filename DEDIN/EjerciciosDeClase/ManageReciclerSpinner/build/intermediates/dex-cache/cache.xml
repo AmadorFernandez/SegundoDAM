@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_9c7c73cc360ce08c517996bf0eba284e7bfdde01/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_d78ba223e00e23cf6fb56b30271ccb702bdc3cf1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_080bebaab77d5363503430c08d98b43dc24e07f2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_02529fe34703de484c4e08838f4abeb228543db9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_8a7e5e575815382dff71be3479c55c084adbff41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_192d01a8cf2f19bc1330300b73ee6432c1c1aa81/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_185e348b11f02df42a19d1ac5a7c1f8d0f9069f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_23a065de4168b8f59ae7dd749994734fb16b0589/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_cd8f5e86b5dd9c4257b8755514572fb8f2dcb5da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f8f7834f5f6c284d860c2af80fb56f7624192c03/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f00d274f6b245601b87f972cd895f231fa3cbbcd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_5a541083f8372001fa0875d2815e227c75ea6ee4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="76b560ea29099796383ab33a5d61355d34043cea">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_4111b151291978cc092a9d3fcceff4810cdbd672/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_7636c8a2ca00c9f1fdefb45e909ca80d644376f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_4d71288b45491b1138fe2ff2ec4f0a32dcd8b2e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_1d82c80522e8003a10e98870463a8e98e9ca6a34/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c10047e155bc547a181471114e0197eb115ad400">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_9b04ec95fbdc5e852bf3dbc3c8f4a8e55c83bcf6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_6b63e710117d4c156b125f5e52289a2a0206d200/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/amador/Escritorio/ManageReciclerSpinner/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_6dba8ffcdee399cda93cb1685af39988b1d3c64f/classes.dex" />
+    </item>
+
+</items>

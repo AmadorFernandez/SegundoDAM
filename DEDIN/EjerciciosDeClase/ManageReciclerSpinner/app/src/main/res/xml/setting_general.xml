@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="@string/pref_user_acount">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/pref_user_title"
+            android:key="remember_user"
+            android:summary="@string/pref_remenber"
+            />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/text_name_user"
+            android:key="pref_name_user"
+            android:summary="@string/pref_password_sumary"
+            />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/text_email"
+            android:key="pref_email"
+            android:summary="@string/text_summary_email"
+            />
+
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/text_paswd"
+            android:key="pref_pwd"
+            android:summary="@string/text_summary_pwd"
+            />
+
+    </PreferenceCategory>
+</PreferenceScreen>

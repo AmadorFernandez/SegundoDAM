@@ -1,0 +1,87 @@
+import javax.imageio.metadata.IIOInvalidTreeException;
+import javax.imageio.metadata.IIOMetadataFormat;
+
+public class Almacen {
+
+	public static final int ENVIO_MAX = 1000;
+	public static final int ENVIO_MIN = 400;
+	public static final int CAPACIDAD_MAXIMA = 20000;
+	private int nEnvios;
+	private int dia;
+	private int stock;
+	private boolean error;
+	
+	
+	
+	
+	public Almacen(){
+		
+		this.dia = 1;
+		this.error = false;
+		this.stock = 8000;
+		this.nEnvios = 0;
+		System.out.println("\nDía "+this.dia+"\n");
+	}
+	
+	private void actualizarLlegadas(){
+		
+		this.nEnvios++;
+		if(this.nEnvios == 3){
+			
+			this.nEnvios = 0;
+			this.dia++;
+			System.out.println("\nDía "+this.dia+"\n");
+		}
+	}
+	
+	public synchronized void entrada(int cantidad){
+		
+		System.out.println("Llegan "+cantidad+" piezas");
+		int preConteo = cantidad + this.stock;
+		
+		if(preConteo > CAPACIDAD_MAXIMA){
+			
+			this.error = true;
+			System.out.println("La suma es de "+preConteo+" piezas y supera la capacidad del almacen");
+			
+		}else {
+			
+			this.stock += cantidad;
+			System.out.println("Hay "+this.stock+" piezas en el almacen");
+			actualizarLlegadas();
+			
+		}
+		
+	}
+	
+	public synchronized void salida(int nPiezas){
+		
+		System.out.println("Pedido de "+nPiezas+" piezas");
+		
+		if(this.stock < nPiezas){
+			
+			this.error = true;
+			System.out.println("Hay "+this.stock+" piezas en el almacen y no se puede cubrir el pedido");
+			
+		}else {
+			
+			this.stock -= nPiezas;
+			System.out.println("Hay "+this.stock+" piezas en el almacen");
+			
+		}
+		
+		
+	}
+	
+	public synchronized boolean hayError(){
+		
+		return this.error;
+	}
+	
+ 
+	
+	
+	
+	
+	
+}

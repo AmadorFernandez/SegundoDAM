@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Preference category">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:title="List preference"
+            android:entries="@array/pref_numcolums_entire"
+            android:entryValues="@array/pref_numcolums_entire"
+            android:key="list_preference_1" />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference"
+            android:key="edit_text_preference_1" />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference"
+            android:key="edit_text_preference_1" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Switch preference"
+            android:key="switch_preference_1" />
+    </PreferenceCategory>
+</PreferenceScreen>
